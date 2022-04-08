@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Minijocs/Lluita_de_sables/Espasa.gd" type="Script" id=1]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Imatges_lluita_de_sables/Animacio_espasa/png-minecraft-sword-png-Minecraft-Sword-Pixel-Art_thumbnail-removebg-preview.png" type="Texture" id=2]
+
+[node name="Lluita de sables" type="Node2D"]
+
+[node name="Espasa" type="Sprite" parent="."]
+position = Vector2( 234, 193.5 )
+scale = Vector2( 1.02, 0.966667 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
