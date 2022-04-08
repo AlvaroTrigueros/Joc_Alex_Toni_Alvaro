@@ -1,2 +1,7 @@
 Joc Toni, Alex i Álvaro.
 
+La nostra idea del programa consisteix d'una plataforma que conté diversos mini videojocs
+a dins, tant individuals com col·lectius (2 jugadors o més). Simples i entenedors, els 
+nostres jocs estaran disenyats, pensats i creats, per ser dinàmics i divertits.
+
+La idea és fer-ne 9, per tal de fer un menú de 3x3 (vegeu - idea_menu1.0.png -)
