@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/canyeria.png" type="Texture" id=1]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Canyeria.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 539 )
+
+[node name="Area_Canyeria" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="canyeria_inferior" type="Sprite" parent="."]
+position = Vector2( 0, 614 )
+scale = Vector2( 0.4, 1 )
+texture = ExtResource( 1 )
+
+[node name="canyeria_superior" type="Sprite" parent="."]
+position = Vector2( 1, -626 )
+rotation = -3.14159
+scale = Vector2( 0.4, 1 )
+texture = ExtResource( 1 )
+
+[node name="Colision_Canyeria_inferior" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 614 )
+shape = SubResource( 1 )
+
+[node name="Colision_Canyeria_superior" type="CollisionShape2D" parent="."]
+position = Vector2( 2, -627 )
+shape = SubResource( 1 )
