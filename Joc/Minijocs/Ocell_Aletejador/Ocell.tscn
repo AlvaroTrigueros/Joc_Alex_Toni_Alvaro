@@ -21,6 +21,7 @@ animations = [ {
 script = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
 scale = Vector2( 0.25, 0.25 )
 polygon = PoolVector2Array( -23, -96, 72, -96, 148, -26, 148, 23, 99, 147, 74, 172, 27, 171, -27, 145, -118, 240, -151, 239, -272, 75, -274, -133, -136, -137, -76, -53, -52, -53 )
 
@@ -29,4 +30,5 @@ scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 1 )
 animation = "aleteja"
 frame = 1
+
 playing = true
