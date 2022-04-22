@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell.tscn" type="PackedScene" id=1]
@@ -18,3 +19,4 @@ position = Vector2( 1073, 218 )
 
 [connection signal="body_shape_entered" from="Terra" to="Ocell" method="_on_Terra_body_shape_entered"]
 [connection signal="body_shape_entered" from="Canyeria" to="Ocell" method="_on_Canyeria_body_shape_entered"]
+

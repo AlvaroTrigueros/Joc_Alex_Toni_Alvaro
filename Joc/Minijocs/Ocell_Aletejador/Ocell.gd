@@ -6,7 +6,9 @@ extends KinematicBody2D
 # var b = "text"
 var velocitat_ocell = Vector2(0 ,0)
 var salt = -350
+
 var gravetat = 750
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +23,7 @@ func _process(delta):
 			velocitat_ocell.y = salt
 		else:
 			if velocitat_ocell.y > -500:
+
 				velocitat_ocell.y += salt
 			else: 
 				pass
@@ -40,3 +43,4 @@ func _on_Canyeria_body_shape_entered(body_rid, body, body_shape_index, local_sha
 func _on_Terra_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == 'Ocell':
 		ocell_aletejador_game_over()
+
