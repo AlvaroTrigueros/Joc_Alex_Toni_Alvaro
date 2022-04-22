@@ -1,0 +1,3 @@
+[gd_scene format=2]
+
+[node name="Menu_inicial" type="Node2D"]
