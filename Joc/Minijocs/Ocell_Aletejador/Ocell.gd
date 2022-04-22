@@ -6,7 +6,7 @@ extends KinematicBody2D
 # var b = "text"
 var velocitat_ocell = Vector2(0 ,0)
 var salt = -350
-var gravetat = 750
+var gravetat = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	velocitat_ocell.y += gravetat * delta
-	if Input.is_action_just_pressed('ESPAI'):
+	if Input.is_action_just_pressed("Salta_ocell_aletejador"):
 		if velocitat_ocell.y > 0:
 			velocitat_ocell.y = salt
 		else:
