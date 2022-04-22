@@ -1,3 +1,22 @@
-[gd_scene format=2]
+
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Canyeria.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell_Aletejador.gd" type="Script" id=3]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Terra.tscn" type="PackedScene" id=4]
 
 [node name="Ocell_Aletejador" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Terra" parent="." instance=ExtResource( 4 )]
+
+[node name="Ocell" parent="." instance=ExtResource( 1 )]
+position = Vector2( 177, 257 )
+
+[node name="Canyeria" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1073, 218 )
+
+[connection signal="body_shape_entered" from="Terra" to="Ocell" method="_on_Terra_body_shape_entered"]
+[connection signal="body_shape_entered" from="Canyeria" to="Ocell" method="_on_Canyeria_body_shape_entered"]
+
