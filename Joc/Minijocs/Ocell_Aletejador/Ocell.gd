@@ -16,7 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	velocitat_ocell.y += gravetat * delta
-	if Input.is_action_just_pressed("Salta_ocell_aletejador"):
+	if Input.is_action_just_pressed("ESPAI"):
 		if velocitat_ocell.y > 0:
 			velocitat_ocell.y = salt
 		else:
@@ -24,6 +24,7 @@ func _process(delta):
 				velocitat_ocell.y += salt
 			else: 
 				pass
+				
 	move_and_slide(velocitat_ocell)
 
 func ocell_aletejador_game_over():
@@ -40,3 +41,4 @@ func _on_Canyeria_body_shape_entered(body_rid, body, body_shape_index, local_sha
 func _on_Terra_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == 'Ocell':
 		ocell_aletejador_game_over()
+

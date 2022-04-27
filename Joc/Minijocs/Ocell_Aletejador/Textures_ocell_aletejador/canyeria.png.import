@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/canyeria.png-002fcbcd18ab5cd9cb83c21a8b4b6da1.stex"
+path="res://.import/canyeria.png-31ac0321f39cefa548a44ffd03584157.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Joc/Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/canyeria.png"
-dest_files=[ "res://.import/canyeria.png-002fcbcd18ab5cd9cb83c21a8b4b6da1.stex" ]
+source_file="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/canyeria.png"
+dest_files=[ "res://.import/canyeria.png-31ac0321f39cefa548a44ffd03584157.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ocell1.png-dd20ac49c933635bcbc684421e2df046.stex"
+path="res://.import/ocell1.png-df766c9885a19f63f3e11603267df5e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Joc/Minijocs/Ocell_Aletejador/Animacio_Ocell/ocell1.png"
-dest_files=[ "res://.import/ocell1.png-dd20ac49c933635bcbc684421e2df046.stex" ]
+source_file="res://Minijocs/Ocell_Aletejador/Animacio_Ocell/ocell1.png"
+dest_files=[ "res://.import/ocell1.png-df766c9885a19f63f3e11603267df5e6.stex" ]
 
 [params]
 
