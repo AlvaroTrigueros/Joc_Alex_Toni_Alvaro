@@ -5,6 +5,7 @@ extends Node2D
 var altura_canyeria = 0
 var troba_nova_altura = true
 var puntuacio_ocell_aletejador = 0
+var limit_genera_canyeria = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,14 +18,17 @@ func _ready():
 	
 	altura_canyeria = $Canyeria3.position.y
 	
-#	$Ocell.AnimatedSprite.play('aleteja', true)
+	$Marcador.text = str(puntuacio_ocell_aletejador)
+	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#$Marcador.rect_size = $Marcador.get_font("font").get_string_size($Marcador.text)
 	
-	$Canyeria1.velocitat_canyeria += 1 * delta
-	$Canyeria2.velocitat_canyeria += 1 * delta
-	$Canyeria3.velocitat_canyeria += 1 * delta
-
+	$Canyeria1.velocitat_canyeria += 2.5 * delta
+	$Canyeria2.velocitat_canyeria += 2.5 * delta
+	$Canyeria3.velocitat_canyeria += 2.5 * delta
+	
 		
 	if $Ocell.gravetat == 0:
 		$Canyeria1.velocitat_canyeria = 0
@@ -36,9 +40,10 @@ func _process(delta):
 			
 	
 	while troba_nova_altura:
-		altura_canyeria = rand_range((altura_canyeria)+200, (altura_canyeria)-200)
+		altura_canyeria = rand_range((altura_canyeria)+limit_genera_canyeria, (altura_canyeria)-limit_genera_canyeria)
 		if altura_canyeria > 99 and altura_canyeria < 516:
 			print(altura_canyeria)
+			limit_genera_canyeria += 10
 			troba_nova_altura = false
 			
 	if $Canyeria1.position.x <= -50:
@@ -60,15 +65,16 @@ func _process(delta):
 func _on_Canyeria1_puntua():
 	puntuacio_ocell_aletejador += 1
 	print(puntuacio_ocell_aletejador)
+	$Marcador.text = str(puntuacio_ocell_aletejador)
 	
 func _on_Canyeria2_puntua():
 	puntuacio_ocell_aletejador += 1
 	print(puntuacio_ocell_aletejador)
-
+	$Marcador.text = str(puntuacio_ocell_aletejador)
 
 func _on_Canyeria3_puntua():
 	puntuacio_ocell_aletejador += 1
 	print(puntuacio_ocell_aletejador)
-
+	$Marcador.text = str(puntuacio_ocell_aletejador)
 
 
