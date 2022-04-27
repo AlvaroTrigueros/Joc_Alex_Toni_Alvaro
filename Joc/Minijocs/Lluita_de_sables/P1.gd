@@ -48,3 +48,11 @@ func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == 'ataca':
 		pegant = false
 		$EspasaP1/CollisionEspasa.disabled = true
+
+
+
+func _on_EspasaP2_body_entered(body):
+	if Input.is_action_pressed("R"):
+		pass
+	else:
+		$CanvasLayer/BarraVida1.value -= 20

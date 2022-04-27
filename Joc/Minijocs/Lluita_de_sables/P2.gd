@@ -8,7 +8,7 @@ var pegant = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	position = Vector2(900,510)
-	$EspasaP2/CollisionEspasa.disabled = true
+	$EspasaP2/CollisionEspasa.set_deferred('disabled', true)
 func _physics_process(delta):
 	velocitat.x = 0
 	if Input.is_action_pressed("FLETXA_DRETA"):
@@ -18,7 +18,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("FLETXA_AMUNT") and is_on_floor():
 		velocitat += salt
 	if Input.is_action_just_pressed("FLETXA_AVALL"):
-		$EspasaP2/CollisionEspasa.disabled = false
+		$EspasaP2/CollisionEspasa.set_deferred('disabled', false)
 	else:
 		pass
 	velocitat += gravetat * delta
@@ -46,15 +46,14 @@ func anima(velocitat: Vector2):
 			pegant = true
 
 
-func _on_EspasaP1_body_entered(body):
-	if Input.is_action_just_pressed("S"):
-		$BarraVidaP2.frame += 1
-	else:
-		pass
-		
-
-
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == 'ataca':
 		pegant = false
-		$EspasaP2/CollisionEspasa.disabled = true
+		$EspasaP2/CollisionEspasa.set_deferred('disabled', true)
+
+
+func _on_EspasaP1_body_entered(body):
+	if Input.is_action_pressed("0"):
+		pass
+	else:
+		$CanvasLayer/BarraVida2.value -= 20

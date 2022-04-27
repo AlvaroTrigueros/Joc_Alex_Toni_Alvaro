@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Vida1.png-7944d9d9b9ab32a71e3742da9dc36e8a.stex"
+path="res://.import/BarraPlena.png-f50a70b62e0bb5462343f64e7f15bbb7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minijocs/Lluita_de_sables/Barravida/Vida1.png"
-dest_files=[ "res://.import/Vida1.png-7944d9d9b9ab32a71e3742da9dc36e8a.stex" ]
+source_file="res://Minijocs/Lluita_de_sables/Barravida/BarraPlena.png"
+dest_files=[ "res://.import/BarraPlena.png-f50a70b62e0bb5462343f64e7f15bbb7.stex" ]
 
 [params]
 
