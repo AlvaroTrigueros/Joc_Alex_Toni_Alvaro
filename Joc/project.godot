@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Joc1v1.0"
+run/main_scene="res://Minijocs/Lluita_de_sables/Lluita de sables.tscn"
 config/icon="res://icon.png"
 
 [input]
@@ -223,6 +224,11 @@ FLETXA_AMUNT={
 FLETXA_AVALL={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777234,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Protegeixte_LluitadeSables={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777350,"unicode":0,"echo":false,"script":null)
  ]
 }
 

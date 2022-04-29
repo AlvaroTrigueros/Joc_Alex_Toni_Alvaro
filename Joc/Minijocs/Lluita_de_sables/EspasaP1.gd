@@ -13,7 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("D"):
-		set_scale(Vector2(1,1))
-	if Input.is_action_pressed("A"):
-		set_scale(Vector2(-1,1))
+	if not (Input.is_action_pressed("D") and Input.is_action_pressed("A")):
+		if Input.is_action_pressed("D"):
+			set_scale(Vector2(1,1))
+		elif Input.is_action_pressed("A"):
+			set_scale(Vector2(-1,1))
+	else:
+		pass
