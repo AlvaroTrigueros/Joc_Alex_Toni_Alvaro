@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -23,3 +23,7 @@ func _process(_delta):
 		position.x -= 7
 	
 
+
+
+func _on_Cotxe_area_entered(area):
+	get_tree().quit()

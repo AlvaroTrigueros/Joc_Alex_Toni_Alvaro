@@ -14,7 +14,7 @@ func _ready():
 		add_child(obj1)
 	for _i in range(n_cotxes_carril):
 		var obj1 = preload("res://Minijocs/Guaita_Objecte/obj_1.tscn").instance()
-		rand_x = rand_range(0,1125)
+		rand_x = rand_range(0,300)
 		rand_y = rand_range(300,325)
 		obj1.global_position = Vector2(rand_x,rand_y)  
 		add_child(obj1)
@@ -24,3 +24,4 @@ func _ready():
 		rand_y = rand_range(475,500)
 		obj1.global_position = Vector2(rand_x,rand_y)  
 		add_child(obj1)
+	

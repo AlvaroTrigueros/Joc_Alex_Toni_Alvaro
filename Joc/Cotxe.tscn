@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 342.994, 716.617 )
 
-[node name="Cotxe" type="StaticBody2D"]
+[node name="Cotxe" type="Area2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -25,3 +25,5 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[connection signal="area_entered" from="." to="." method="_on_Cotxe_area_entered"]

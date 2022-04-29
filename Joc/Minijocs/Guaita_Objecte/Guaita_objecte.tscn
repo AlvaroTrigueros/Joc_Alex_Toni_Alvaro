@@ -48,4 +48,4 @@ offset = Vector2( 455.066, 0 )
 script = ExtResource( 3 )
 
 [node name="Cotxe" parent="." instance=ExtResource( 4 )]
-position = Vector2( 566, 300 )
+position = Vector2( 812.112, 295.243 )
