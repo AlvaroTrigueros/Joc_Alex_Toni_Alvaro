@@ -1,4 +1,4 @@
-extends Sprite
+extends StaticBody2D
 
 
 # Declare member variables here. Examples:
@@ -17,4 +17,9 @@ func _process(_delta):
 		position.y -= 7
 	if Input.is_action_pressed("FLETXA_AVALL") and position.y <= 500:
 		position.y += 7
+	if Input.is_action_pressed("FLETXA_DRETA") and position.x < 1000:
+		position.x += 7
+	if Input.is_action_pressed("FLETXA_ESQUERRA") and position.x > 0:
+		position.x -= 7
 	
+
