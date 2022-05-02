@@ -1,24 +1,34 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Canyeria.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell_Aletejador.gd" type="Script" id=3]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Terra.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/fons_ocell_aletejador.jpg" type="Texture" id=5]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/fons_ocell_aletejador2.jpg" type="Texture" id=5]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/ADOBEGOTHICSTD-BOLD.OTF" type="DynamicFontData" id=6]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/fons.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
+size = 75
 font_data = ExtResource( 6 )
 
 [node name="Ocell_Aletejador" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="fons1" type="Sprite" parent="."]
-position = Vector2( 515, 309.5 )
-scale = Vector2( 3.43667, 3.64881 )
+[node name="Fons1" type="Sprite" parent="."]
+position = Vector2( 522, 321 )
+scale = Vector2( 0.865833, 1.37778 )
 texture = ExtResource( 5 )
+script = ExtResource( 7 )
+
+[node name="Fons2" type="Sprite" parent="."]
+position = Vector2( 1559.5, 320 )
+scale = Vector2( 0.865833, 1.37778 )
+texture = ExtResource( 5 )
+script = ExtResource( 7 )
 
 [node name="Terra" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2, 1 )
 
 [node name="Ocell" parent="." instance=ExtResource( 1 )]
 position = Vector2( 177, 257 )
@@ -33,14 +43,26 @@ position = Vector2( 1523, 384 )
 position = Vector2( 1973, 238 )
 
 [node name="Marcador" type="RichTextLabel" parent="."]
-margin_left = 509.0
-margin_top = 29.0
-margin_right = 549.0
-margin_bottom = 69.0
+margin_left = 462.0
+margin_top = 27.0
+margin_right = 604.0
+margin_bottom = 107.0
 custom_fonts/normal_font = SubResource( 1 )
-tab_size = 24
+
+[node name="Pantalla_mort" type="RichTextLabel" parent="."]
+margin_left = 1.0
+margin_top = 143.0
+margin_right = 1119.0
+margin_bottom = 462.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "                   HAS MORT!
+Prem ESPAI per tornar a jugar
+         o ESC per tornar a la 
+            pantalla principal"
 
 [connection signal="body_shape_entered" from="Terra" to="Ocell" method="_on_Terra_body_shape_entered"]
+[connection signal="ocell_aletejador_game_over" from="Ocell" to="." method="_on_Ocell_ocell_aletejador_game_over"]
 [connection signal="body_shape_entered" from="Canyeria1" to="Ocell" method="_on_Canyeria_body_shape_entered"]
 [connection signal="puntua" from="Canyeria1" to="." method="_on_Canyeria1_puntua"]
 [connection signal="body_shape_entered" from="Canyeria2" to="Ocell" method="_on_Canyeria_body_shape_entered"]
