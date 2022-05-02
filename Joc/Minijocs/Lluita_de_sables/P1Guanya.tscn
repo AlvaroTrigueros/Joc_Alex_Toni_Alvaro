@@ -1,10 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://P2.tscn" type="PackedScene" id=1]
-[ext_resource path="res://P1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Background/example.png" type="Texture" id=3]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Background/Plataforma.png" type="Texture" id=4]
-[ext_resource path="res://Minijocs/Lluita_de_sables/Imatges_lluita_de_sables/P1 P2/P1.png" type="Texture" id=5]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Imatges_lluita_de_sables/P1 P2/P2.png" type="Texture" id=5]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/KO-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://Minijocs/Lluita_de_sables/P1Guanya.gd" type="Script" id=7]
+[ext_resource path="res://Minijocs/Lluita_de_sables/TextureButton2.gd" type="Script" id=8]
+[ext_resource path="res://Minijocs/Lluita_de_sables/TextureButton.gd" type="Script" id=9]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/Quit-removebg-preview.png" type="Texture" id=10]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/Again-removebg-preview.png" type="Texture" id=11]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 1026, 600 )
@@ -31,6 +35,7 @@ extents = Vector2( 49.125, 6.375 )
 extents = Vector2( 140.5, 11.25 )
 
 [node name="Lluita de sables" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 515.25, 336 )
@@ -41,21 +46,6 @@ texture = ExtResource( 3 )
 position = Vector2( -243.714, 252.973 )
 scale = Vector2( 1.2522, 1.51324 )
 texture = ExtResource( 4 )
-
-[node name="KinematicBody2D" parent="." groups=["Personatge"] instance=ExtResource( 2 )]
-script = null
-
-[node name="EspasaP1" parent="KinematicBody2D" index="1"]
-script = null
-
-[node name="KinematicBody2D2" parent="." groups=["Personatge"] instance=ExtResource( 1 )]
-script = null
-
-[node name="EspasaP2" parent="KinematicBody2D2" index="1"]
-script = null
-
-[node name="AnimatedSprite" parent="KinematicBody2D2" index="2"]
-frame = 8
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -118,11 +108,37 @@ position = Vector2( 153.5, 429.75 )
 shape = SubResource( 7 )
 
 [node name="P1" type="Sprite" parent="."]
-position = Vector2( 517, 317 )
+position = Vector2( 353, 152 )
 texture = ExtResource( 5 )
 
-[connection signal="body_entered" from="KinematicBody2D/EspasaP1" to="KinematicBody2D2" method="_on_EspasaP1_body_entered"]
-[connection signal="body_entered" from="KinematicBody2D2/EspasaP2" to="KinematicBody2D" method="_on_EspasaP2_body_entered"]
+[node name="KO" type="Sprite" parent="."]
+position = Vector2( 612, 324 )
+scale = Vector2( 0.468, 0.475 )
+texture = ExtResource( 6 )
 
-[editable path="KinematicBody2D"]
-[editable path="KinematicBody2D2"]
+[node name="Quit" type="Sprite" parent="."]
+position = Vector2( 982, 50 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 10 )
+
+[node name="textquit" type="TextureButton" parent="Quit"]
+margin_left = -153.0
+margin_top = -213.0
+margin_right = 173.0
+margin_bottom = 207.0
+script = ExtResource( 9 )
+
+[node name="Again" type="Sprite" parent="."]
+position = Vector2( 982, 135 )
+scale = Vector2( 0.13, 0.13 )
+texture = ExtResource( 11 )
+
+[node name="textagain" type="TextureButton" parent="Again"]
+margin_left = -215.0
+margin_top = -231.0
+margin_right = 192.0
+margin_bottom = 231.0
+script = ExtResource( 8 )
+
+[connection signal="pressed" from="Quit/textquit" to="Quit/textquit" method="_on_textquit_pressed"]
+[connection signal="pressed" from="Again/textagain" to="Again/textagain" method="_on_textagain_pressed"]

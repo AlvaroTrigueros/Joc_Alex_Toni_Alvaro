@@ -47,24 +47,24 @@ animations = [ {
 "name": "ataca",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "quiet",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 20 ), ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "salta",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "corre",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 29 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "mor",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "quiet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "corre",
 "speed": 10.0
 } ]
 
