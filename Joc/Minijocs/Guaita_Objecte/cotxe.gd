@@ -27,3 +27,4 @@ func _process(_delta):
 
 func _on_Cotxe_area_entered(_area):
 	get_tree().quit()
+	
