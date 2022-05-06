@@ -12,12 +12,14 @@ var limit_velocitat_ocell = 525
 signal ocell_aletejador_game_over
 var viu = true
 
+var llista_puntuacions = load_file('res://Minijocs/Ocell_Aletejador/high_score_ocell_aletejador.txt')
+var dic_file = 'res://Minijocs/Ocell_Aletejador/high_score_ocell_aletejador.txt'
+var highest_scores = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
+	print(llista_puntuacions)
+	#highest_scores = llista_puntuacions[len(llista_puntuacions)-10:len(llista_puntuacions)]
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if velocitat_ocell.y < limit_velocitat_ocell:
@@ -52,4 +54,20 @@ func _on_Canyeria_body_shape_entered(body_rid, body, body_shape_index, local_sha
 func _on_Terra_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == 'Ocell':
 		viu = false
+
+func load_file(file_path):
+	#https://godotengine.org/qa/57130/how-to-import-and-read-text
+	var lista = []
+	var file = File.new()
+	file.open(file_path, File.READ)
+	var index = 1
+	
+	while not file.eof_reached(): # iterate through all lines until the end of file is reached
+		var line = file.get_line()
+		lista.append(str2var(line))
+
+		index += 1
+	file.close()
+
+	return lista
 

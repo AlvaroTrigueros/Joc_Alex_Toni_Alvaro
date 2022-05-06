@@ -7,12 +7,13 @@ var troba_nova_altura = true
 var puntuacio_ocell_aletejador = 0
 var limit_genera_canyeria = 200
 
-onready var file = 'res://Minijocs/Ocell_Aletejador/high_score_ocell_aletejador.txt'
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	load_file(file)
+	
+	#print(llista_puntuacions)
 	
 	$Ocell.velocitat_ocell = Vector2(0 ,0)
 	$Ocell.salt = -350
@@ -44,7 +45,6 @@ func _process(delta):
 	while troba_nova_altura:
 		altura_canyeria = rand_range((altura_canyeria)+limit_genera_canyeria, (altura_canyeria)-limit_genera_canyeria)
 		if altura_canyeria > 99 and altura_canyeria < 516:
-			print(altura_canyeria)
 			limit_genera_canyeria += 10
 			troba_nova_altura = false
 			
@@ -62,27 +62,29 @@ func _process(delta):
 		$Canyeria3.position.x += 450*3
 		troba_nova_altura = true
 		$Canyeria3.position.y = altura_canyeria
+
 		
-	
 func _on_Canyeria1_puntua():
 	puntuacio_ocell_aletejador += 1
-	print(puntuacio_ocell_aletejador)
+	
 	$Marcador.text = str(puntuacio_ocell_aletejador)
 	
 func _on_Canyeria2_puntua():
 	puntuacio_ocell_aletejador += 1
-	print(puntuacio_ocell_aletejador)
+	
 	$Marcador.text = str(puntuacio_ocell_aletejador)
 
 func _on_Canyeria3_puntua():
 	puntuacio_ocell_aletejador += 1
-	print(puntuacio_ocell_aletejador)
+	
 	$Marcador.text = str(puntuacio_ocell_aletejador)
 
 
 
 
 func _on_Ocell_ocell_aletejador_game_over():
+	#llista_puntuacions.append()
+	#save(llista_puntuacions, dic_file)
 	
 	$Canyeria1.velocitat_canyeria = 0
 	$Canyeria2.velocitat_canyeria = 0
@@ -93,21 +95,35 @@ func _on_Ocell_ocell_aletejador_game_over():
 	
 	$Pantalla_mort.visible = true
 	
+	
 	if Input.is_action_just_pressed("ESPAI"):
+		$Ocell.llista_puntuacions += [int(puntuacio_ocell_aletejador)]#.append(int(puntuacio_ocell_aletejador))
+		print($Ocell.llista_puntuacions)
+		save($Ocell.llista_puntuacions, $Ocell.dic_file)
 		$Ocell.viu = true
 		get_tree().reload_current_scene()
-		
+		#No es guarda la puntuació si el joc es tanca abans de premer espai
 
-func load_file(file_path):
-	#https://godotengine.org/qa/57130/how-to-import-and-read-text
-	var f = File.new()
-	f.open(file, File.READ)
-	var index = 1
-	while not f.eof_reached(): # iterate through all lines until the end of file is reached
-		var line = f.get_line()
-		line += " "
-		print(line + str(index))
-
-		index += 1
-	f.close()
+func save(llista_puntuacions, file_path):
+	var contingut = ''
+	llista_puntuacions.sort()
+	for i in range(0, len(llista_puntuacions)):
+		if llista_puntuacions[i] == 0:
+			continue
+		if i != len(llista_puntuacions)-1:
+			contingut += str(llista_puntuacions[i]) + '\n'
+		else:
+			contingut += str(llista_puntuacions[i])
+	print(contingut)
+	
+	var file = File.new()
+	
+	file.open(file_path, File.WRITE)
+	file.store_string(contingut)
+	
+	file.close()
 	return
+#	var2str() str2var()
+
+
+
