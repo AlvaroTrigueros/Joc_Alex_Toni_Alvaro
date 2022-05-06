@@ -1,16 +1,17 @@
-extends Area2D
-
+extends KinematicBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
-#var velocitat = Vector2(0,0)
+var velocitat = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
+ # Replace with function body.
+	pass
+	
+func _physics_process(delta):
+	pass
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if Input.is_action_pressed("FLETXA_AMUNT") and position.y >= 100:
@@ -25,6 +26,6 @@ func _process(_delta):
 
 
 
-func _on_Cotxe_area_entered(_area):
+func _on_Cotxe_body_entered(body):
 	get_tree().quit()
 	

@@ -29,7 +29,7 @@ func _ready():
 			obj1.global_position = Vector2(rand_x,rand_y)  
 			add_child(obj1)
 			
-
+		
 
 	
 	
