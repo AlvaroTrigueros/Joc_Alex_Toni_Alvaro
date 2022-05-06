@@ -51,6 +51,9 @@ texture = ExtResource( 4 )
 
 [node name="KinematicBody2D2" parent="." groups=["Personatge"] instance=ExtResource( 1 )]
 
+[node name="AnimatedSprite" parent="KinematicBody2D2" index="2"]
+frame = 5
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

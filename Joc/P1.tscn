@@ -23,9 +23,9 @@
 [ext_resource path="res://Minijocs/Lluita_de_sables/Hero Knight/Sprites/HeroKnight/Attack1/HeroKnight_Attack1_2.png" type="Texture" id=21]
 [ext_resource path="res://Minijocs/Lluita_de_sables/P1.gd" type="Script" id=22]
 [ext_resource path="res://Minijocs/Lluita_de_sables/EspasaP1.gd" type="Script" id=23]
-[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/Cor.png" type="Texture" id=24]
-[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/BarraPlena.png" type="Texture" id=25]
-[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/BarraVuida.png" type="Texture" id=26]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/Cor3.png" type="Texture" id=24]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/BarraBuida3.png" type="Texture" id=25]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/BarraPlena3.png" type="Texture" id=26]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_0.png" type="Texture" id=27]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_7.png" type="Texture" id=28]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_9.png" type="Texture" id=29]
@@ -47,16 +47,6 @@ animations = [ {
 "name": "ataca",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 3 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "salta",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 29 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "mor",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "quiet",
@@ -65,6 +55,16 @@ animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "corre",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "salta",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "mor",
 "speed": 10.0
 } ]
 
@@ -101,13 +101,14 @@ shape = SubResource( 4 )
 
 [node name="BarraVida1" type="TextureProgress" parent="CanvasLayer"]
 pause_mode = 1
-margin_left = -9.0
+margin_left = -50.0
 margin_top = -1.0
-margin_right = 407.0
-margin_bottom = 415.0
+margin_right = 576.0
+margin_bottom = 625.0
+rect_scale = Vector2( 0.7, 0.7 )
 value = 100.0
 texture_under = ExtResource( 24 )
-texture_over = ExtResource( 26 )
-texture_progress = ExtResource( 25 )
+texture_over = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

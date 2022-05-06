@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/1Player.PNG-ce0ceca9b4f50792c264ac86979d43f1.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Minijocs/Lluita_de_sables/Imatges_lluita_de_sables/KO.png"
+source_file="res://Minijocs/Pedra_Paper_Tisora/Imatges/1Player.PNG"
+dest_files=[ "res://.import/1Player.PNG-ce0ceca9b4f50792c264ac86979d43f1.stex" ]
+
 [params]
 
 compress/mode=0

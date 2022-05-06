@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Minijocs/Pedra_Paper_Tisora/Imatges/BackGround.PNG" type="Texture" id=1]
+
+[node name="Pedra_Paper_Tisora1Jugador" type="Node2D"]
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( 468.5, 295.25 )
+scale = Vector2( 2.22167, 2.19524 )
+texture = ExtResource( 1 )

@@ -2,7 +2,7 @@ extends Node2D
 
 var direction = Vector2.ZERO
 var moviment = false
-var comptador = 65
+var comptador = 30
 func _ready():
 	direction = Vector2(400,300)
 		

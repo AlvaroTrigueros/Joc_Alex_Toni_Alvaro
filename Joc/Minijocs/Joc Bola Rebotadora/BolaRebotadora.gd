@@ -1,11 +1,15 @@
 extends Node2D
 
 onready var bl = preload("res://Minijocs/Joc Bola Rebotadora/Blocs.tscn")
+var graella = [Vector2.ZERO]
 func posar_blocs():
 	var numero_blocs = 0
-	for j in range(65):
+	for j in range(30):
 		var bloc = bl.instance()
-		bloc.position = Vector2(rand_range(100,900), rand_range(150,400))
+		bloc.position = Vector2.ZERO
+		while bloc.position in graella:
+			bloc.position = Vector2((randi()%9 + 1)*100, (randi()%5 + 1) * 50 + 100)
+		graella.append(bloc.position)
 		bloc.scale = Vector2(rand_range(0.2,0.7),rand_range(0.2,0.7))
 		bloc.modulate = Color(rand_range(0,1),rand_range(0,1),rand_range(0,1))
 		numero_blocs += 1

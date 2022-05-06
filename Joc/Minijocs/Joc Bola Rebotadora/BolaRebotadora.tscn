@@ -96,8 +96,4 @@ pause_mode = 1
 position = Vector2( 277, -201 )
 shape = SubResource( 3 )
 
-[node name="TileMap" type="TileMap" parent="."]
-cell_size = Vector2( 41, 41 )
-format = 1
-
 [connection signal="screen_exited" from="Bola/Bola/VisibilityNotifier2D" to="Bola" method="_on_VisibilityNotifier2D_screen_exited"]
