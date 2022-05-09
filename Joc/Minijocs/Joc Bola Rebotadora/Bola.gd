@@ -21,6 +21,7 @@ func _physics_process(delta):
 			if(collision.collider.name == "Bloc"):
 				comptador -= 1
 				collision.collider.hit()
+			
 	if $CanvasLayer/TextureProgress.value == 0:
 		get_tree().change_scene("res://Minijocs//Joc Bola Rebotadora/GameOver.tscn")
 

@@ -48,7 +48,7 @@ func anima(velocitat: Vector2):
 			elif Input.is_action_pressed("FLETXA_AVALL"):
 				animacio.play("ataca")
 				pegant = true
-			if $CanvasLayer/BarraVida2.value == 0:
+			if $CanvasLayer/BarraVida2.value == 20:
 				animacio.play("mor")
 				morint = true
 				

@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/P2WINS-removebg-preview.png" type="Texture" id=1]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Background/example.png" type="Texture" id=3]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Background/Plataforma.png" type="Texture" id=4]
-[ext_resource path="res://Minijocs/Lluita_de_sables/Imatges_lluita_de_sables/P1 P2/P1.png" type="Texture" id=5]
 [ext_resource path="res://Minijocs/Lluita_de_sables/TextureButton2.gd" type="Script" id=6]
 [ext_resource path="res://Minijocs/Lluita_de_sables/TextureButton.gd" type="Script" id=7]
 [ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/Quit-removebg-preview.png" type="Texture" id=8]
@@ -31,10 +31,6 @@ extents = Vector2( 49.125, 6.375 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 140.5, 11.25 )
-
-[sub_resource type="StreamTexture" id=8]
-flags = 4
-load_path = "res://.import/KO-removebg-preview.png-728147fa530f95db115688de1c6a26d1.stex"
 
 [node name="Lluita de sables" type="Node2D"]
 
@@ -108,11 +104,6 @@ __meta__ = {
 position = Vector2( 153.5, 429.75 )
 shape = SubResource( 7 )
 
-[node name="KO" type="Sprite" parent="."]
-position = Vector2( 612, 324 )
-scale = Vector2( 0.468, 0.475 )
-texture = SubResource( 8 )
-
 [node name="Quit" type="Sprite" parent="."]
 position = Vector2( 982, 50 )
 scale = Vector2( 0.15, 0.15 )
@@ -138,8 +129,9 @@ margin_bottom = 231.0
 script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 366, 494 )
-texture = ExtResource( 5 )
+position = Vector2( 500, 330 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
 
 [connection signal="pressed" from="Quit/textquit" to="Quit/textquit" method="_on_textquit_pressed"]
 [connection signal="pressed" from="Again/textagain" to="Again/textagain" method="_on_textagain_pressed"]
