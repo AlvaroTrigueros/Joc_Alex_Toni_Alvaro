@@ -14,7 +14,10 @@ var viu = true
 
 var llista_puntuacions = load_file('res://Minijocs/Ocell_Aletejador/high_score_ocell_aletejador.txt')
 var dic_file = 'res://Minijocs/Ocell_Aletejador/high_score_ocell_aletejador.txt'
-var highest_scores = []
+#var highest_scores = []
+
+var rotacio = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,6 +25,7 @@ func _ready():
 	#highest_scores = llista_puntuacions[len(llista_puntuacions)-10:len(llista_puntuacions)]
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if velocitat_ocell.y < limit_velocitat_ocell:
 		velocitat_ocell.y += gravetat * delta
 		
@@ -37,11 +41,19 @@ func _process(delta):
 	if not viu:
 		ocell_aletejador_game_over()
 		
+	if gravetat != 0:
+		rotation_degrees = velocitat_ocell.y/15
+	if gravetat == 0:
+		rotation_degrees = 90
+	
+	if position.y >= 575:
+		velocitat_ocell.y = 0
 	move_and_slide(velocitat_ocell)
 
 func ocell_aletejador_game_over():
 	gravetat = 0
-	velocitat_ocell.y = 0
+	velocitat_ocell.y = 200
+	
 	salt = 0
 	emit_signal('ocell_aletejador_game_over')
 	$AnimatedSprite.stop()

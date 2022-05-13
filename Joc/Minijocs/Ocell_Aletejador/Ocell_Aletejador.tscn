@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Canyeria.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
 font_data = ExtResource( 6 )
 
 [node name="Ocell_Aletejador" type="Node2D"]
@@ -27,11 +31,11 @@ scale = Vector2( 0.865833, 1.37778 )
 texture = ExtResource( 5 )
 script = ExtResource( 7 )
 
-[node name="Terra" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2, 1 )
-
 [node name="Ocell" parent="." instance=ExtResource( 1 )]
 position = Vector2( 177, 257 )
+
+[node name="Terra" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2, 1 )
 
 [node name="Canyeria1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1073, 218 )
@@ -61,8 +65,17 @@ Prem ESPAI per tornar a jugar
          o ESC per tornar a la 
             pantalla principal"
 
-[connection signal="body_shape_entered" from="Terra" to="Ocell" method="_on_Terra_body_shape_entered"]
+[node name="HighScoresText" type="RichTextLabel" parent="."]
+margin_left = 868.0
+margin_top = 17.0
+margin_right = 1011.0
+margin_bottom = 214.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Loading..."
+
 [connection signal="ocell_aletejador_game_over" from="Ocell" to="." method="_on_Ocell_ocell_aletejador_game_over"]
+[connection signal="body_shape_entered" from="Terra" to="Ocell" method="_on_Terra_body_shape_entered"]
 [connection signal="body_shape_entered" from="Canyeria1" to="Ocell" method="_on_Canyeria_body_shape_entered"]
 [connection signal="puntua" from="Canyeria1" to="." method="_on_Canyeria1_puntua"]
 [connection signal="body_shape_entered" from="Canyeria2" to="Ocell" method="_on_Canyeria_body_shape_entered"]

@@ -7,8 +7,10 @@ var troba_nova_altura = true
 var puntuacio_ocell_aletejador = 0
 var limit_genera_canyeria = 200
 
+var text_puntuacions = 'Millors Puntuacions:\n'
+var llista_puntuacions_per_text = []
 
-
+var guarda_punuacio = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,8 +33,14 @@ func _ready():
 	
 	$Fons1.velocitat_fons = -100
 	$Fons2.velocitat_fons = -100
-
 	
+	llista_puntuacions_per_text = $Ocell.llista_puntuacions.duplicate()
+	llista_puntuacions_per_text.invert()
+	print(llista_puntuacions_per_text)
+	for i in range(0,5):
+		text_puntuacions += str(llista_puntuacions_per_text[i]) + '\n'
+		
+	$HighScoresText.text = text_puntuacions
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#$Marcador.rect_size = $Marcador.get_font("font").get_string_size($Marcador.text)
@@ -81,7 +89,6 @@ func _on_Canyeria3_puntua():
 
 
 
-
 func _on_Ocell_ocell_aletejador_game_over():
 	#llista_puntuacions.append()
 	#save(llista_puntuacions, dic_file)
@@ -95,14 +102,17 @@ func _on_Ocell_ocell_aletejador_game_over():
 	
 	$Pantalla_mort.visible = true
 	
-	
-	if Input.is_action_just_pressed("ESPAI"):
+	if guarda_punuacio:
 		$Ocell.llista_puntuacions += [int(puntuacio_ocell_aletejador)]#.append(int(puntuacio_ocell_aletejador))
 		print($Ocell.llista_puntuacions)
 		save($Ocell.llista_puntuacions, $Ocell.dic_file)
+		
+		guarda_punuacio = false
+		
+	if Input.is_action_just_pressed("ESPAI"):
 		$Ocell.viu = true
 		get_tree().reload_current_scene()
-		#No es guarda la puntuació si el joc es tanca abans de premer espai
+		
 
 func save(llista_puntuacions, file_path):
 	var contingut = ''
