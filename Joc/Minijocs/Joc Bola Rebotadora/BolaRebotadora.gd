@@ -2,6 +2,8 @@ extends Node2D
 
 onready var bl = preload("res://Minijocs/Joc Bola Rebotadora/Blocs.tscn")
 var graella = [Vector2.ZERO]
+
+
 func posar_blocs():
 	var numero_blocs = 0
 	for j in range(30):
@@ -22,4 +24,10 @@ func _ready():
 	$Plataforma.scale = Vector2(0.7,0.7)
 	posar_blocs()
 
-
+#func _physics_process(delta):
+#	if $Bola.a == true:
+#		var dif = $Bola/Bola.position.x - $Plataforma/Plataforma.position.x
+#		$Bola.direction = Vector2(0.5,1) * (dif/100)
+#		print(dif/100)
+#		print($Bola.direction)
+		

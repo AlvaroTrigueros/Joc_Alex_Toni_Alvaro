@@ -19,18 +19,6 @@ position = Vector2( 520, 300 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 
-[node name="PlayAgain" type="Sprite" parent="."]
-position = Vector2( 988, 108 )
-scale = Vector2( 0.125, 0.125 )
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
-
-[node name="TextureButton" type="TextureButton" parent="PlayAgain"]
-margin_left = -184.0
-margin_top = -216.0
-margin_right = 197.0
-margin_bottom = 201.0
-
 [node name="Exit" type="Sprite" parent="."]
 position = Vector2( 988, 38 )
 scale = Vector2( 0.28, 0.28 )
@@ -43,5 +31,17 @@ margin_top = -96.0
 margin_right = 93.0
 margin_bottom = 100.0
 
-[connection signal="pressed" from="PlayAgain/TextureButton" to="PlayAgain" method="_on_TextureButton_pressed"]
+[node name="PlayAgain" type="Sprite" parent="."]
+position = Vector2( 988, 108 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="TextureButton" type="TextureButton" parent="PlayAgain"]
+margin_left = -184.0
+margin_top = -216.0
+margin_right = 197.0
+margin_bottom = 201.0
+
 [connection signal="pressed" from="Exit/TextureButton" to="Exit" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="PlayAgain/TextureButton" to="PlayAgain" method="_on_TextureButton_pressed"]

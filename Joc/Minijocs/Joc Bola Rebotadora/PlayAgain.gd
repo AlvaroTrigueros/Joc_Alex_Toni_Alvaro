@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene("res://Joc Bola Rebotadora/BolaRebotadora.tscn")
+	get_tree().change_scene('res://Minijocs/Joc Bola Rebotadora/BolaRebotadora.tscn')
