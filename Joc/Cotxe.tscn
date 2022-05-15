@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Minijocs/Guaita_Objecte/Gràfics/cotxe1.png" type="Texture" id=1]
+[ext_resource path="res://Minijocs/Guaita_Objecte/cotxe.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 334.828
+height = 763.585
+
+[node name="Cotxe" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 12, 4 )
+rotation = 1.5708
+scale = Vector2( 0.244901, 0.244901 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.255612, 0.255612 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}

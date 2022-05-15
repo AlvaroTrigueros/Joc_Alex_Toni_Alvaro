@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Minijocs/Guaita_Objecte/Gràfics/carretera2.png" type="Texture" id=1]
 [ext_resource path="res://Minijocs/Guaita_Objecte/Gràfics/carretera1.png" type="Texture" id=2]
 [ext_resource path="res://Minijocs/Guaita_Objecte/Carretera.gd" type="Script" id=3]
+[ext_resource path="res://Cotxe.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Minijocs/Guaita_Objecte/Guaita_objecte.gd" type="Script" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -13,10 +15,37 @@ animations = [ {
 } ]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 438.5, 300 )
+position = Vector2( 308, 299 )
+rotation = -0.00174533
 scale = Vector2( 0.609896, 0.555556 )
 frames = SubResource( 1 )
 animation = "mou_carretera"
+frame = 1
+offset = Vector2( 455.066, 0 )
 script = ExtResource( 3 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( -863, 299 )
+rotation = -0.00174533
+scale = Vector2( 0.609896, 0.555556 )
+frames = SubResource( 1 )
+animation = "mou_carretera"
+frame = 1
+offset = Vector2( 455.066, 0 )
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
+position = Vector2( -2034, 299 )
+rotation = -0.00174533
+scale = Vector2( 0.609896, 0.555556 )
+frames = SubResource( 1 )
+animation = "mou_carretera"
+frame = 1
+offset = Vector2( 455.066, 0 )
+script = ExtResource( 3 )
+
+[node name="Cotxe" parent="." instance=ExtResource( 4 )]
+position = Vector2( 812.112, 295.243 )
