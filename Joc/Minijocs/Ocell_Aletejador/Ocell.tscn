@@ -28,5 +28,5 @@ polygon = PoolVector2Array( -23, -96, 72, -96, 148, -26, 148, 23, 99, 147, 74, 1
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 1 )
 animation = "aleteja"
-frame = 7
+frame = 5
 playing = true
