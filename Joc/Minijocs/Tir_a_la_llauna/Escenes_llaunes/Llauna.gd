@@ -27,6 +27,7 @@ func _ready():
 		forat.visible = false
 		
 	position = Vector2(rand_range(0+200, 1024-200), 650)
+	#position = Vector2(45, 55)
 	
 	if rand_range(1, 2) < 1.3:
 		escala = rand_range(0.5, 1)
@@ -68,11 +69,14 @@ func _process(delta):
 
 
 func _on_Area_llauna_input_event(viewport, event, shape_idx):
+	#si está pasando por delante de un texto no lo detecta
+	#process priority?
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		hit = true
 		
-		sprite_forats[forats].visible = true
-		sprite_forats[forats].global_position = get_global_mouse_position() #+ Vector2(0, -5) * escala 
+		if forats < 3:
+			sprite_forats[forats].visible = true
+			sprite_forats[forats].global_position = get_global_mouse_position() #+ Vector2(0, -5) * escala 
 		forats+=1
 		
 		canvia_sentit = (randi()%2)

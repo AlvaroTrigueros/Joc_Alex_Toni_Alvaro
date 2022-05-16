@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.235294, 0.235294, 0.27451, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="Button" type="Button"]
+margin_left = 117.0
+margin_top = 85.0
+margin_right = 759.0
+margin_bottom = 242.0
+custom_styles/hover = SubResource( 1 )

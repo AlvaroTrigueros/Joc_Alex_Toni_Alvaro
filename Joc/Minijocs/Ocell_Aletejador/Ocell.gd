@@ -21,8 +21,10 @@ var rotacio = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(llista_puntuacions)
+	
+	#print(llista_puntuacions)
 	#highest_scores = llista_puntuacions[len(llista_puntuacions)-10:len(llista_puntuacions)]
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	

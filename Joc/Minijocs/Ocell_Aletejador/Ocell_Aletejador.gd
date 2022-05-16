@@ -16,6 +16,9 @@ var guarda_punuacio = true
 func _ready():
 	
 	#print(llista_puntuacions)
+	$Menu_mort.visible = false
+	$Menu_mort/TornarAJugar.text = 'TORNA A JUGAR'
+	$Menu_mort/TornarAMenu.text = 'TORNA A INICI'
 	
 	$Ocell.velocitat_ocell = Vector2(0 ,0)
 	$Ocell.salt = -350
@@ -25,7 +28,7 @@ func _ready():
 	$Canyeria2.velocitat_canyeria = 200
 	$Canyeria3.velocitat_canyeria = 200
 	
-	$Pantalla_mort.visible = false
+	#$Pantalla_mort.visible = false
 	
 	altura_canyeria = $Canyeria3.position.y
 	
@@ -100,7 +103,7 @@ func _on_Ocell_ocell_aletejador_game_over():
 	$Fons1.velocitat_fons = 0
 	$Fons2.velocitat_fons = 0
 	
-	$Pantalla_mort.visible = true
+	#$Pantalla_mort.visible = true
 	
 	if guarda_punuacio:
 		$Ocell.llista_puntuacions += [int(puntuacio_ocell_aletejador)]#.append(int(puntuacio_ocell_aletejador))
@@ -109,10 +112,17 @@ func _on_Ocell_ocell_aletejador_game_over():
 		
 		guarda_punuacio = false
 		
-	if Input.is_action_just_pressed("ESPAI"):
+	#if Input.is_action_just_pressed("ESPAI"):
+	
+	$Menu_mort.visible = true
+	
+	$Menu_mort/Pantalla_mort.bbcode_text = '[center]'+'HAS MORT AMB UNA PUNTUACIO DE ' + str(puntuacio_ocell_aletejador)+'[/center]'
+	if $Menu_mort/TornarAJugar.is_pressed():
 		$Ocell.viu = true
 		get_tree().reload_current_scene()
-		
+	
+	if $Menu_mort/TornarAMenu.is_pressed():
+		print('pues encara no va')
 
 func save(llista_puntuacions, file_path):
 	var contingut = ''
