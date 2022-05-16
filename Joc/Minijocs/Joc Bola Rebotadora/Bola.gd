@@ -3,7 +3,7 @@ var speed = 500
 var direction = Vector2(0.5,1)
 var moviment = false
 var comptador = 30
-var a
+
 func _ready():
 	pass
 		
@@ -11,7 +11,7 @@ func _process(delta):
 	if comptador == 0:
 		get_tree().change_scene("res://Minijocs/Joc Bola Rebotadora/YouWin.tscn")
 func _physics_process(delta):
-	a = false
+	
 	if Input.is_action_just_released("ESPAI"):
 		moviment = true
 	if moviment == true:
@@ -21,8 +21,12 @@ func _physics_process(delta):
 		if collision:
 			#direction = direction.bounce(collision.normal)
 			if(collision.collider.name == "Plataforma"):
-				direction = direction.bounce(collision.normal)
-				a = true
+				var dif
+				dif = $Bola.global_position - collision.collider.global_position
+				print(dif)
+#				direction = direction.bounce(collision.normal)
+				direction =  Vector2(cos(70/dif), sin(70/dif))
+				direction = direction * 1.11
 			else:
 				direction = direction.bounce(collision.normal)
 				if(collision.collider.name == "Bloc"):
