@@ -1,0 +1,50 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1020.0
+margin_bottom = 595.0
+color = Color( 0.980392, 0.639216, 0.109804, 1 )
+
+[node name="B_Ocell_Aletejador" type="Button" parent="."]
+margin_left = 31.0
+margin_top = 120.0
+margin_right = 332.0
+margin_bottom = 280.0
+rect_pivot_offset = Vector2( 110, 64 )
+
+[node name="B_Guaita_Objecte" type="Button" parent="."]
+margin_left = 31.0
+margin_top = 315.0
+margin_right = 332.0
+margin_bottom = 475.0
+rect_pivot_offset = Vector2( 110, 64 )
+
+[node name="B_Tir_A_Llauna" type="Button" parent="."]
+margin_left = 354.0
+margin_top = 120.0
+margin_right = 655.0
+margin_bottom = 279.0
+rect_pivot_offset = Vector2( 39, 79 )
+
+[node name="B_Lluita_Sables" type="Button" parent="."]
+margin_left = 354.0
+margin_top = 315.0
+margin_right = 655.0
+margin_bottom = 474.0
+rect_pivot_offset = Vector2( 39, 79 )
+
+[node name="B_Tic_Tac_Toe" type="Button" parent="."]
+margin_left = 678.0
+margin_top = 120.0
+margin_right = 979.0
+margin_bottom = 280.0
+rect_pivot_offset = Vector2( 39, 79 )
+
+[node name="B_Brakeout" type="Button" parent="."]
+margin_left = 678.0
+margin_top = 315.0
+margin_right = 979.0
+margin_bottom = 475.0
+rect_pivot_offset = Vector2( 39, 79 )
