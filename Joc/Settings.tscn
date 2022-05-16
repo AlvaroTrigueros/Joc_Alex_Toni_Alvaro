@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1020.0
+margin_bottom = 595.0
+color = Color( 0.980392, 0.639216, 0.109804, 1 )
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 52.0
+margin_top = 120.0
+margin_right = 128.0
+margin_bottom = 160.0
