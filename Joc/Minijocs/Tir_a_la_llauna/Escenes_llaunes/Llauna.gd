@@ -15,11 +15,17 @@ signal puntua
 signal resta_vida
 # var b = "text"
 
+onready var sprite_forats = [$Forat1, $Forat2, $Forat3]
+var forats = 0
 
+#onready var forat = Sprite
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
 	
+	for forat in sprite_forats:
+		forat.visible = false
+		
 	position = Vector2(rand_range(0+200, 1024-200), 650)
 	
 	if rand_range(1, 2) < 1.3:
@@ -64,6 +70,10 @@ func _process(delta):
 func _on_Area_llauna_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		hit = true
+		
+		sprite_forats[forats].visible = true
+		sprite_forats[forats].global_position = get_global_mouse_position() #+ Vector2(0, -5) * escala 
+		forats+=1
 		
 		canvia_sentit = (randi()%2)
 		#print(canvia_sentit)

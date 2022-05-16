@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/Tir_a_la_llauna.gd" type="Script" id=1]
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/Pistola.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-7.png" type="Texture" id=10]
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-0.png" type="Texture" id=11]
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/Suelo_madera.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/HighScoresText.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -29,7 +30,7 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.82857, 2.20588 )
 frames = SubResource( 1 )
 animation = "animacio_fons"
-frame = 6
+frame = 5
 playing = true
 
 [node name="Marcador" parent="." instance=ExtResource( 3 )]
@@ -43,6 +44,8 @@ margin_right = 1010.0
 grow_horizontal = 0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
+
+[node name="HighScoresText" parent="." instance=ExtResource( 13 )]
 
 [node name="YSort" type="YSort" parent="."]
 
