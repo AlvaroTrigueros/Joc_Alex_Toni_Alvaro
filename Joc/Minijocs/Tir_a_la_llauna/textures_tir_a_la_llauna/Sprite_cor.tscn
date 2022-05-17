@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Cor.png" type="Texture" id=1]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Sprite_cor.gd" type="Script" id=2]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite_cor" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 185, 200 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -26, -52, -49, -28, -49, -7, 0, 44, 49, -4, 48, -36, 27, -52, 13, -52, 0, -36, -12, -52 )

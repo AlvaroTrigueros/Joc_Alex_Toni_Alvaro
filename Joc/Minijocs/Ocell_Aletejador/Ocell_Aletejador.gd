@@ -39,7 +39,7 @@ func _ready():
 	
 	llista_puntuacions_per_text = $Ocell.llista_puntuacions.duplicate()
 	llista_puntuacions_per_text.invert()
-	print(llista_puntuacions_per_text)
+	#print(llista_puntuacions_per_text)
 	for i in range(0,5):
 		text_puntuacions += str(llista_puntuacions_per_text[i]) + '\n'
 		
@@ -107,22 +107,22 @@ func _on_Ocell_ocell_aletejador_game_over():
 	
 	if guarda_punuacio:
 		$Ocell.llista_puntuacions += [int(puntuacio_ocell_aletejador)]#.append(int(puntuacio_ocell_aletejador))
-		print($Ocell.llista_puntuacions)
+	#print($Ocell.llista_puntuacions)
 		save($Ocell.llista_puntuacions, $Ocell.dic_file)
 		
 		guarda_punuacio = false
 		
 	#if Input.is_action_just_pressed("ESPAI"):
-	
-	$Menu_mort.visible = true
-	
-	$Menu_mort/Pantalla_mort.bbcode_text = '[center]'+'HAS MORT AMB UNA PUNTUACIO DE ' + str(puntuacio_ocell_aletejador)+'[/center]'
-	if $Menu_mort/TornarAJugar.is_pressed():
-		$Ocell.viu = true
-		get_tree().reload_current_scene()
-	
-	if $Menu_mort/TornarAMenu.is_pressed():
-		print('pues encara no va')
+	if $Ocell.position.y > 575:
+		$Menu_mort.visible = true
+
+		$Menu_mort/Pantalla_mort.bbcode_text = '[center]'+'HAS MORT AMB UNA PUNTUACIO DE ' + str(puntuacio_ocell_aletejador)+'[/center]'
+		if $Menu_mort/TornarAJugar.is_pressed():
+			$Ocell.viu = true
+			get_tree().reload_current_scene()
+
+		if $Menu_mort/TornarAMenu.is_pressed():
+			print('pues encara no va')
 
 func save(llista_puntuacions, file_path):
 	var contingut = ''
@@ -134,7 +134,7 @@ func save(llista_puntuacions, file_path):
 			contingut += str(llista_puntuacions[i]) + '\n'
 		else:
 			contingut += str(llista_puntuacions[i])
-	print(contingut)
+	#print(contingut)
 	
 	var file = File.new()
 	
