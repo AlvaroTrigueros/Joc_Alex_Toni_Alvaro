@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/obona.png-bc384d045ae35e2b3bb54a76b2d1f477.stex"
+path="res://.import/obona.png-12efa55c43fa9464caf0536ac7f7a24e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://obona.png"
-dest_files=[ "res://.import/obona.png-bc384d045ae35e2b3bb54a76b2d1f477.stex" ]
+source_file="res://Minijocs/Tic_Tac_Toe/obona.png"
+dest_files=[ "res://.import/obona.png-12efa55c43fa9464caf0536ac7f7a24e.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/creubona.png-ded960967a400980bd131633217e8b2d.stex"
+path="res://.import/creubona.png-dcd7431c85d84c2bc3069bf62099780b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://creubona.png"
-dest_files=[ "res://.import/creubona.png-ded960967a400980bd131633217e8b2d.stex" ]
+source_file="res://Minijocs/Tic_Tac_Toe/creubona.png"
+dest_files=[ "res://.import/creubona.png-dcd7431c85d84c2bc3069bf62099780b.stex" ]
 
 [params]
 
