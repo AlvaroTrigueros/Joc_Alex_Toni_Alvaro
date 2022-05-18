@@ -6,7 +6,7 @@ var puntuacio_tir_a_la_llauna = 0
 var tirs = 0
 var precisio = 0
 var p = 0
-var vides_tir_a_la_llauna = 3
+var vides_tir_a_la_llauna = 5
 var posicio_cors = Vector2(175, 50)
 var mort = false
 
@@ -30,7 +30,6 @@ var nova_llauna = null
 
 var genera_nova_llauna = 0
 
-var Sprite_cor = preload('res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Sprite_cor.tscn')
 onready var animacio = $YSort/Pistola/AnimacioPistola
 var dic_high_score_tir_a_la_llauna = 'res://Minijocs/Tir_a_la_llauna/high_scores_tir_a_la_llauna.txt'
 var text_puntuacions = 'Millors Puntuacions:\n'
@@ -56,17 +55,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _process(delta):
-	if vides_tir_a_la_llauna <= 0:
+	if vides_tir_a_la_llauna <= 0 and not mort:
 		llista_puntuacions.append(puntuacio_tir_a_la_llauna)
 		save(llista_puntuacions, dic_high_score_tir_a_la_llauna)
 		mort = true
-		vides_tir_a_la_llauna = 3
+		#vides_tir_a_la_llauna = 3
 		#get_tree().reload_current_scene()
 	
-	#for i in range (0, vides_tir_a_la_llauna):
-	#	print('hola')
-	#	Sprite_cor.instance()
-	#	add_child(Sprite_cor)
+	$Cors.value = vides_tir_a_la_llauna
+	
 	if mort:
 		$Menu_mort.visible = true
 	
