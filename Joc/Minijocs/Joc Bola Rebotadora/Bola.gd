@@ -23,10 +23,23 @@ func _physics_process(delta):
 			if(collision.collider.name == "Plataforma"):
 				var dif
 				dif = $Bola.global_position - collision.collider.global_position
-				print(dif)
-#				direction = direction.bounce(collision.normal)
-				direction =  Vector2(cos(70/dif), sin(70/dif))
-				direction = direction * 1.11
+				var direccio_final
+				var angle
+				angle = abs(dif.x) * 1.20160214
+				if angle < 20:
+					angle = 20
+				if angle > 70:
+					angle = 70
+				angle = 90 - angle
+
+				direccio_final = Vector2(cos(angle), sin(angle))
+				if dif.x < 0:
+					direccio_final.x = -abs(direccio_final.x)
+				elif dif.x > 0:
+					direccio_final.x = abs(direccio_final.x)
+				print(angle, direccio_final)
+				direction = direction.bounce(collision.normal)
+				
 			else:
 				direction = direction.bounce(collision.normal)
 				if(collision.collider.name == "Bloc"):
