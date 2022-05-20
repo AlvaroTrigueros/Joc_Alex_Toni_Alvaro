@@ -8,16 +8,12 @@ extents = Vector2( 509.5, 5 )
 [node name="terra_superior" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 10.0
-
-[node name="terra_inferior" type="ColorRect" parent="."]
-margin_top = 591.0
-margin_right = 1024.0
-margin_bottom = 601.0
+color = Color( 0.470588, 0.682353, 0.831373, 1 )
 
 [node name="CollisionShape_superior" type="CollisionShape2D" parent="."]
-position = Vector2( 509.5, 5 )
+position = Vector2( 509.5, -1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape_inferior" type="CollisionShape2D" parent="."]
-position = Vector2( 512, 596 )
+position = Vector2( 512, 594 )
 shape = SubResource( 1 )

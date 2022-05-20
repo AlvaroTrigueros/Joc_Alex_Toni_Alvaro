@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/fondo madera.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 50 )
+scale = Vector2( 1.98132, 0.48172 )
+texture = ExtResource( 1 )

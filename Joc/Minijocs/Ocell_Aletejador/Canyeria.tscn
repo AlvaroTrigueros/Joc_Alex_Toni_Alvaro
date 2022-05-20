@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/canyeria.png" type="Texture" id=1]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Canyeria.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 539 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 81.5 )
 
 [node name="Area_Canyeria" type="Area2D"]
 script = ExtResource( 2 )
@@ -13,6 +16,7 @@ script = ExtResource( 2 )
 position = Vector2( 0, 614 )
 scale = Vector2( 0.4, 1 )
 texture = ExtResource( 1 )
+flip_h = true
 
 [node name="canyeria_superior" type="Sprite" parent="."]
 position = Vector2( 1, -626 )
@@ -27,3 +31,11 @@ shape = SubResource( 1 )
 [node name="Colision_Canyeria_superior" type="CollisionShape2D" parent="."]
 position = Vector2( 2, -627 )
 shape = SubResource( 1 )
+
+[node name="area_puntuacio" type="Area2D" parent="."]
+
+[node name="col_puntuacio" type="CollisionShape2D" parent="area_puntuacio"]
+position = Vector2( 0, -6.5 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="area_puntuacio" to="." method="_on_area_puntuacio_body_entered"]

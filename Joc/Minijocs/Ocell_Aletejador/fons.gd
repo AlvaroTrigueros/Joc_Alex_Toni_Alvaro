@@ -1,16 +1,19 @@
-extends Node2D
+extends Sprite
 
 
 # Declare member variables here. Examples:
-# var a = 2
-var velocitat_canyeria = 500
+var velocitat_fons = -100
+
+# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x -= velocitat_canyeria*delta
+	position.x += velocitat_fons*delta
+	if position.x <= -525:
+		position.x += 525+1545

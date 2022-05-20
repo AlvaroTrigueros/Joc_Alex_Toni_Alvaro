@@ -1,0 +1,92 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/Tir_a_la_llauna.gd" type="Script" id=1]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/Pistola.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Marcador.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-3.png" type="Texture" id=4]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-4.png" type="Texture" id=5]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-2.png" type="Texture" id=6]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-1.png" type="Texture" id=7]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-5.png" type="Texture" id=8]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-6.png" type="Texture" id=9]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-7.png" type="Texture" id=10]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_fons1/fons1-0.png" type="Texture" id=11]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/Suelo_madera.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/HighScoresText.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Menu_mort.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/ADOBEGOTHICSTD-BOLD.OTF" type="DynamicFontData" id=15]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/textura_cors.tscn" type="PackedScene" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "animacio_fons",
+"speed": 7.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 75
+font_data = ExtResource( 15 )
+
+[node name="Tir_a_la_llauna" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+process_priority = 2
+position = Vector2( 512, 300 )
+scale = Vector2( 1.82857, 2.20588 )
+frames = SubResource( 1 )
+animation = "animacio_fons"
+frame = 4
+playing = true
+
+[node name="Marcador" parent="." instance=ExtResource( 3 )]
+process_priority = 100
+margin_left = 496.0
+margin_right = 671.0
+mouse_filter = 2
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+
+[node name="Precisio" parent="." instance=ExtResource( 3 )]
+process_priority = 10
+margin_left = 739.0
+margin_right = 1010.0
+grow_horizontal = 0
+mouse_filter = 2
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+scroll_active = false
+
+[node name="HighScoresText" parent="." instance=ExtResource( 13 )]
+light_mask = 2
+margin_left = 31.0
+margin_right = 174.0
+mouse_filter = 2
+scroll_active = false
+
+[node name="Cors" parent="." instance=ExtResource( 16 )]
+margin_left = 206.0
+margin_top = 4.0
+margin_right = 2126.0
+margin_bottom = 1084.0
+mouse_filter = 2
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Sprite" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 511.829, 687.063 )
+
+[node name="Pistola" parent="YSort" instance=ExtResource( 2 )]
+
+[node name="Menu_mort" parent="." instance=ExtResource( 14 )]
+
+[node name="Pantalla_mort" type="RichTextLabel" parent="Menu_mort"]
+margin_left = -959.0
+margin_top = -454.0
+margin_right = 159.0
+margin_bottom = -135.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[editable path="Marcador"]
