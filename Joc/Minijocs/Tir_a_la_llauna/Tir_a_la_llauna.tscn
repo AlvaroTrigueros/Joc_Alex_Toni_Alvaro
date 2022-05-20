@@ -38,7 +38,7 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.82857, 2.20588 )
 frames = SubResource( 1 )
 animation = "animacio_fons"
-frame = 7
+frame = 4
 playing = true
 
 [node name="Marcador" parent="." instance=ExtResource( 3 )]
@@ -69,6 +69,7 @@ margin_left = 206.0
 margin_top = 4.0
 margin_right = 2126.0
 margin_bottom = 1084.0
+mouse_filter = 2
 
 [node name="YSort" type="YSort" parent="."]
 

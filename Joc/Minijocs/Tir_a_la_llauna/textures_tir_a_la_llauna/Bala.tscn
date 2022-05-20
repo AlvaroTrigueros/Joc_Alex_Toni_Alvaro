@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/animacio_pistola/bala.png" type="Texture" id=1]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Bala.gd" type="Script" id=2]
+
+[node name="Sprite_Bala" type="Sprite" groups=["bales"]]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )

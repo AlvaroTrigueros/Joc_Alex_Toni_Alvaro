@@ -22,7 +22,7 @@ var Llauna_pepsico = preload('res://Minijocs/Tir_a_la_llauna/Escenes_llaunes/Lla
 var Llauna_fakecola = preload('res://Minijocs/Tir_a_la_llauna/Escenes_llaunes/Llauna_fakecola.tscn')
 var Llauna_fantacherry = preload('res://Minijocs/Tir_a_la_llauna/Escenes_llaunes/Llauna_fantacherry.tscn')
 var Llauna_llimonada = preload('res://Minijocs/Tir_a_la_llauna/Escenes_llaunes/Llauna_limonada.tscn')
-
+var bala_dic = preload('res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Bala.tscn')
 
 var choices = [Llauna_pepsico, Llauna_fakecola, Llauna_fantacherry , Llauna_llimonada]
 var nova_llauna = null
@@ -35,6 +35,7 @@ var dic_high_score_tir_a_la_llauna = 'res://Minijocs/Tir_a_la_llauna/high_scores
 var text_puntuacions = 'Millors Puntuacions:\n'
 
 var llista_puntuacions = load_file(dic_high_score_tir_a_la_llauna)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -59,9 +60,8 @@ func _process(delta):
 		llista_puntuacions.append(puntuacio_tir_a_la_llauna)
 		save(llista_puntuacions, dic_high_score_tir_a_la_llauna)
 		mort = true
-		#vides_tir_a_la_llauna = 3
-		#get_tree().reload_current_scene()
-	
+		for bala in get_tree().get_nodes_in_group('bales'):
+			bala.queue_free()
 	$Cors.value = vides_tir_a_la_llauna
 	
 	if mort:
@@ -75,13 +75,20 @@ func _process(delta):
 		if $Menu_mort/TornarAMenu.is_pressed():
 			print('pues encara no va')
 	
-	if Input.is_action_just_pressed("click_esquerra"):
+	if Input.is_action_just_pressed("click_esquerra") and not mort:
 		
 		animacio.frame = 0
 		
 		#frames 1, 2 y 3 de (0 de 18) de la animacion  eliminados para que vaya más rápido
 		animacio.play('dispara')
 		tirs += 1
+		
+		var Bala = bala_dic.instance()
+		Bala.scale = Vector2(0.3, 0.3)
+		Bala.global_position = animacio.global_position + Vector2(210, 30)
+		Bala.gravetat = 500
+		
+		add_child(Bala)
 		
 	precisio = calcula_precisio()
 	$Precisio.text = str(precisio) + '%'
