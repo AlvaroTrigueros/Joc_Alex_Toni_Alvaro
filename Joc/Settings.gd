@@ -16,9 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_B_Settings_pressed():
-	get_tree().change_scene("res://Settings.tscn")
-
-
-func _on_Back_pressed():
-	get_tree().change_scene("res://INTRO.tscn")
+func _on_Button_pressed():
+	get_tree().change_scene("res://Menu_principal.tscn")

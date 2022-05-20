@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Menu_principal.gd" type="Script" id=1]
+[ext_resource path="res://backarrow.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -53,9 +54,9 @@ margin_bottom = 475.0
 rect_pivot_offset = Vector2( 39, 79 )
 
 [node name="B_HTP" type="Button" parent="."]
-margin_left = 10.0
+margin_left = 151.0
 margin_top = 528.0
-margin_right = 69.0
+margin_right = 210.0
 margin_bottom = 586.0
 
 [node name="B_Settings" type="Button" parent="."]
@@ -64,4 +65,19 @@ margin_top = 528.0
 margin_right = 139.0
 margin_bottom = 586.0
 
+[node name="Back" type="Button" parent="."]
+modulate = Color( 0.25098, 0.243137, 0.282353, 0 )
+margin_left = 20.0
+margin_top = 527.0
+margin_right = 60.0
+margin_bottom = 579.0
+icon = ExtResource( 2 )
+expand_icon = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 44, 554 )
+scale = Vector2( 0.157795, 0.157795 )
+texture = ExtResource( 2 )
+
 [connection signal="pressed" from="B_Settings" to="." method="_on_B_Settings_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
