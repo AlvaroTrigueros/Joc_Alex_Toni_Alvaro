@@ -6,14 +6,12 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 29, 12 )
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Bloc" type="StaticBody2D" parent="."]
+[node name="Bloc" type="StaticBody2D" groups=["blocs"]]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Bloc"]
+[node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.1375, 0.0565476 )
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

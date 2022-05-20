@@ -50,7 +50,7 @@ func anima(velocitat: Vector2):
 			if $CanvasLayer/BarraVida1.value == 20:
 				animacio.play("mor")
 				morint = true
-		
+				
 			
 
 

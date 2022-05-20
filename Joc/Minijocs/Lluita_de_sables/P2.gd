@@ -51,6 +51,7 @@ func anima(velocitat: Vector2):
 			if $CanvasLayer/BarraVida2.value == 20:
 				animacio.play("mor")
 				morint = true
+		
 				
 
 func _on_AnimatedSprite_animation_finished():
