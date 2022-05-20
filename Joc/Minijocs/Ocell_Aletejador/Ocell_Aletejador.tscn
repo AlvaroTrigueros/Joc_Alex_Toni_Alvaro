@@ -1,22 +1,70 @@
-
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Canyeria.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Ocell_Aletejador.gd" type="Script" id=3]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Terra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/fons_ocell_aletejador2.jpg" type="Texture" id=5]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/ADOBEGOTHICSTD-BOLD.OTF" type="DynamicFontData" id=6]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/fons.gd" type="Script" id=7]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Marcador.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Minijocs/Ocell_Aletejador/HighScoresText.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Menu_mort.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 75
+font_data = ExtResource( 6 )
 
 [node name="Ocell_Aletejador" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="Fons1" type="Sprite" parent="."]
+position = Vector2( 522, 321 )
+scale = Vector2( 0.865833, 1.37778 )
+texture = ExtResource( 5 )
+script = ExtResource( 7 )
+
+[node name="Fons2" type="Sprite" parent="."]
+position = Vector2( 1559.5, 320 )
+scale = Vector2( 0.865833, 1.37778 )
+texture = ExtResource( 5 )
+script = ExtResource( 7 )
+
 [node name="Terra" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2, 1 )
 
 [node name="Ocell" parent="." instance=ExtResource( 1 )]
 position = Vector2( 177, 257 )
 
-[node name="Canyeria" parent="." instance=ExtResource( 2 )]
+[node name="Canyeria1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1073, 218 )
 
-[connection signal="body_shape_entered" from="Terra" to="Ocell" method="_on_Terra_body_shape_entered"]
-[connection signal="body_shape_entered" from="Canyeria" to="Ocell" method="_on_Canyeria_body_shape_entered"]
+[node name="Canyeria2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1523, 384 )
 
+[node name="Canyeria3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1973, 238 )
+
+[node name="Marcador" parent="." instance=ExtResource( 8 )]
+
+[node name="HighScoresText" parent="." instance=ExtResource( 9 )]
+
+[node name="Menu_mort" parent="." instance=ExtResource( 10 )]
+
+[node name="Pantalla_mort" type="RichTextLabel" parent="Menu_mort"]
+margin_left = -955.0
+margin_top = -451.0
+margin_right = 163.0
+margin_bottom = -132.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+
+[connection signal="body_shape_entered" from="Terra" to="Ocell" method="_on_Terra_body_shape_entered"]
+[connection signal="ocell_aletejador_game_over" from="Ocell" to="." method="_on_Ocell_ocell_aletejador_game_over"]
+[connection signal="body_shape_entered" from="Canyeria1" to="Ocell" method="_on_Canyeria_body_shape_entered"]
+[connection signal="puntua" from="Canyeria1" to="." method="_on_Canyeria1_puntua"]
+[connection signal="body_shape_entered" from="Canyeria2" to="Ocell" method="_on_Canyeria_body_shape_entered"]
+[connection signal="puntua" from="Canyeria2" to="." method="_on_Canyeria2_puntua"]
+[connection signal="body_shape_entered" from="Canyeria3" to="Ocell" method="_on_Canyeria_body_shape_entered"]
+[connection signal="puntua" from="Canyeria3" to="." method="_on_Canyeria3_puntua"]

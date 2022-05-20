@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/ADOBEGOTHICSTD-BOLD.OTF" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = ExtResource( 1 )
+
+[node name="HighScoresText" type="RichTextLabel"]
+margin_left = 868.0
+margin_top = 17.0
+margin_right = 1011.0
+margin_bottom = 214.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Loading..."
