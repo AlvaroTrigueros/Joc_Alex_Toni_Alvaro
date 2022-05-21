@@ -2,7 +2,7 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-var comencar = 0
+export var comencar = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,41 +20,42 @@ func _ready():
 func _process(delta):
 	if $"Button(0,0)/Creu00".visible == true and $"Button(1,0)/Creu10".visible == true and $"Button(2,0)/Creu20".visible == true or $"Button(0,0)/Creu00".visible == true and $"Button(0,1)/Creu01".visible == true and $"Button(0,2)/Creu02".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES X!')
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_tree().quit()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
 	if $"Button(1,0)/Creu10".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(1,2)/Creu12".visible == true or $"Button(0,2)/Creu02".visible == true and $"Button(1,2)/Creu12".visible == true and $"Button(2,2)/Creu22".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES X!')
-		$Timer.start()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
 	if $"Button(0,1)/Creu01".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(2,1)/Creu21".visible == true or $"Button(2,0)/Creu20".visible == true and $"Button(2,1)/Creu21".visible == true and $"Button(2,2)/Creu22".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES X!')
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_tree().quit()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
 	if $"Button(0,0)/Creu00".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(2,2)/Creu22".visible == true or $"Button(0,2)/Creu02".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(2,0)/Creu20".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES X!')
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_tree().quit()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
+		
 		
 	if $"Button(0,0)/Cercle00".visible == true and $"Button(1,0)/Cercle10".visible == true and $"Button(2,0)/Cercle20".visible == true or $"Button(0,0)/Cercle00".visible == true and $"Button(0,1)/Cercle01".visible == true and $"Button(0,2)/Cercle02".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES O!')
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_tree().quit()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
 	if $"Button(1,0)/Cercle10".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(1,2)/Cercle12".visible == true or $"Button(0,2)/Cercle02".visible == true and $"Button(1,2)/Cercle12".visible == true and $"Button(2,2)/Cercle22".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES O!')
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_tree().quit()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
 	if $"Button(0,1)/Cercle01".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(2,1)/Cercle21".visible == true or $"Button(2,0)/Cercle20".visible == true and $"Button(2,1)/Cercle21".visible == true and $"Button(2,2)/Cercle22".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES O!')
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_tree().quit()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
 	if $"Button(0,0)/Cercle00".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(2,2)/Cercle22".visible == true or $"Button(0,2)/Cercle02".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(2,0)/Cercle20".visible == true :
 		$RichTextLabel.set_text('HAN GUANYAT LES O!')
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_tree().quit()
+		yield(get_tree().create_timer(1.5), "timeout")
+		get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/menu_o_jugar_tictactoe.tscn')
 
 		
 	if $"Button(0,0)".pressed == true and $"Button(1,0)".pressed == true and $"Button(2,0)".pressed == true and $"Button(0,1)".pressed == true and $"Button(1,1)".pressed == true and $"Button(2,1)".pressed == true and $"Button(0,2)".pressed == true and $"Button(1,2)".pressed == true and $"Button(2,2)".pressed == true:
 		yield(get_tree().create_timer(2.0), "timeout")
-		print('anus')
 		get_tree().reload_current_scene()
 		
 
