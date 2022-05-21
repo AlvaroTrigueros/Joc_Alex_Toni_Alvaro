@@ -132,6 +132,7 @@ func round_to_dec(num, digit):
 
 
 func calcula_precisio():
+	print(puntuacio_tir_a_la_llauna, tirs)
 	if tirs == 0:
 		return 0
 	p = round_to_dec(float(puntuacio_tir_a_la_llauna)/tirs * 100, 2)
