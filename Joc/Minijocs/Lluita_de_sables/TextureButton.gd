@@ -22,4 +22,4 @@ func _ready():
 
 
 func _on_textquit_pressed():
-	get_tree().change_scene("res://Menu_inical.tscn")
+	get_tree().change_scene("res://Menu_principal.tscn")

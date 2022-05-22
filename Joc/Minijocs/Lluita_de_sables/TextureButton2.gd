@@ -17,10 +17,5 @@ func _ready():
 
 
 
-
-
-
-
-
 func _on_textagain_pressed():
 	get_tree().change_scene("res://Minijocs/Lluita_de_sables/Lluita de sables.tscn")

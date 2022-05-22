@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_principal_foto.png-adf8d3a24ab7a9c63eb09743a6263df3.stex"
+path="res://.import/explicacio.png-aa9fce76855bce80ae55fd50ba469a9d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu_principal_foto.png"
-dest_files=[ "res://.import/menu_principal_foto.png-adf8d3a24ab7a9c63eb09743a6263df3.stex" ]
+source_file="res://Minijocs/Joc Bola Rebotadora/explicacio.png"
+dest_files=[ "res://.import/explicacio.png-aa9fce76855bce80ae55fd50ba469a9d.stex" ]
 
 [params]
 

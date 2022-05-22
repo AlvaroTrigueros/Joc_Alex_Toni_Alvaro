@@ -43,3 +43,11 @@ func _on_B_Tir_A_Llauna_pressed():
 func _on_B_Brakeout_pressed():
 	get_tree().change_scene('res://Minijocs/Joc Bola Rebotadora/BolaRebotadora.tscn')
 
+
+
+func _on_TextureButton3_pressed():
+	get_tree().change_scene('res://Minijocs/Tir_a_la_llauna/explicacio_tir.tscn')
+
+
+func _on_TextureButton6_pressed():
+	get_tree().change_scene('res://Minijocs/Joc Bola Rebotadora/explicacio_bola.tscn')
