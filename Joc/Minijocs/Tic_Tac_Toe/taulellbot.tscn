@@ -1,0 +1,233 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Minijocs/Tic_Tac_Toe/creubona.png" type="Texture" id=1]
+[ext_resource path="res://Minijocs/Tic_Tac_Toe/obona.png" type="Texture" id=2]
+[ext_resource path="res://Minijocs/Tic_Tac_Toe/taulellbot.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_right = 1041.0
+margin_bottom = 611.0
+color = Color( 1, 0.596078, 0.121569, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 430.0
+margin_top = 55.0
+margin_right = 449.0
+margin_bottom = 557.0
+rect_pivot_offset = Vector2( -570, -34 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 335.0
+margin_top = -38.0
+margin_right = 352.0
+margin_bottom = 464.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 10, 431 )
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 335.0
+margin_top = -220.0
+margin_right = 352.0
+margin_bottom = 282.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 10, 431 )
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = 604.0
+margin_top = 55.0
+margin_right = 623.0
+margin_bottom = 557.0
+rect_pivot_offset = Vector2( 10, 431 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 36.0
+margin_top = 48.0
+margin_right = 272.0
+margin_bottom = 160.0
+
+[node name="Button(0,0)" type="TextureButton" parent="."]
+margin_left = 278.0
+margin_top = 50.0
+margin_right = 428.0
+margin_bottom = 200.0
+toggle_mode = true
+expand = true
+
+[node name="Creu00" type="Sprite" parent="Button(0,0)"]
+visible = false
+position = Vector2( 100, 87 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( -68.5715, -62.8571 )
+
+[node name="Cercle00" type="Sprite" parent="Button(0,0)"]
+visible = false
+position = Vector2( 73.0001, 68 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(1,0)" type="TextureButton" parent="."]
+margin_left = 452.0
+margin_top = 50.0
+margin_right = 602.0
+margin_bottom = 200.0
+toggle_mode = true
+
+[node name="Creu10" type="Sprite" parent="Button(1,0)"]
+visible = false
+position = Vector2( 100, 87 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( -68.5715, -62.8571 )
+
+[node name="Cercle10" type="Sprite" parent="Button(1,0)"]
+visible = false
+position = Vector2( 75.0001, 67 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(2,0)" type="TextureButton" parent="."]
+margin_left = 628.0
+margin_top = 50.0
+margin_right = 778.0
+margin_bottom = 200.0
+toggle_mode = true
+
+[node name="Creu20" type="Sprite" parent="Button(2,0)"]
+visible = false
+position = Vector2( 100, 87 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( -68.5715, -62.8571 )
+
+[node name="Cercle20" type="Sprite" parent="Button(2,0)"]
+visible = false
+position = Vector2( 74.0001, 70 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(0,1)" type="TextureButton" parent="."]
+margin_left = 278.0
+margin_top = 226.0
+margin_right = 428.0
+margin_bottom = 376.0
+toggle_mode = true
+
+[node name="Creu01" type="Sprite" parent="Button(0,1)"]
+visible = false
+position = Vector2( 74, 88 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( 6.10352e-05, -54.2855 )
+
+[node name="Cercle01" type="Sprite" parent="Button(0,1)"]
+visible = false
+position = Vector2( 72, 72 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(1,1)" type="TextureButton" parent="."]
+margin_left = 452.0
+margin_top = 230.0
+margin_right = 602.0
+margin_bottom = 380.0
+toggle_mode = true
+
+[node name="Creu11" type="Sprite" parent="Button(1,1)"]
+visible = false
+position = Vector2( 97, 86 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( -68.5715, -62.8571 )
+
+[node name="Cercle11" type="Sprite" parent="Button(1,1)"]
+visible = false
+position = Vector2( 71, 68 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(2,1)" type="TextureButton" parent="."]
+margin_left = 628.0
+margin_top = 227.0
+margin_right = 778.0
+margin_bottom = 377.0
+toggle_mode = true
+
+[node name="Creu21" type="Sprite" parent="Button(2,1)"]
+visible = false
+position = Vector2( 102, 91 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( -68.5715, -62.8571 )
+
+[node name="Cercle21" type="Sprite" parent="Button(2,1)"]
+visible = false
+position = Vector2( 69.0001, 71 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(0,2)" type="TextureButton" parent="."]
+margin_left = 278.0
+margin_top = 407.0
+margin_right = 428.0
+margin_bottom = 557.0
+toggle_mode = true
+
+[node name="Creu02" type="Sprite" parent="Button(0,2)"]
+visible = false
+position = Vector2( 72, 90 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( 6.10352e-05, -54.2855 )
+
+[node name="Cercle02" type="Sprite" parent="Button(0,2)"]
+visible = false
+position = Vector2( 71.0001, 71 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(1,2)" type="TextureButton" parent="."]
+margin_left = 452.0
+margin_top = 407.0
+margin_right = 602.0
+margin_bottom = 557.0
+toggle_mode = true
+
+[node name="Creu12" type="Sprite" parent="Button(1,2)"]
+visible = false
+position = Vector2( 75, 92 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( 6.10352e-05, -54.2855 )
+
+[node name="Cercle12" type="Sprite" parent="Button(1,2)"]
+visible = false
+position = Vector2( 69.0001, 68 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Button(2,2)" type="TextureButton" parent="."]
+margin_left = 628.0
+margin_top = 406.0
+margin_right = 778.0
+margin_bottom = 556.0
+toggle_mode = true
+
+[node name="Creu22" type="Sprite" parent="Button(2,2)"]
+visible = false
+position = Vector2( 78, 89 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+offset = Vector2( 6.10352e-05, -54.2855 )
+
+[node name="Cercle22" type="Sprite" parent="Button(2,2)"]
+visible = false
+position = Vector2( 75.0001, 71 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
