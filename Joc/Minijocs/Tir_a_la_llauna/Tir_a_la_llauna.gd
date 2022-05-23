@@ -72,8 +72,7 @@ func _process(delta):
 		
 			get_tree().reload_current_scene()
 	
-		if $Menu_mort/TornarAMenu.is_pressed():
-			print('pues encara no va')
+			
 	
 	if Input.is_action_just_pressed("click_esquerra") and not mort:
 		
