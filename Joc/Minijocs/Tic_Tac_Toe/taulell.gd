@@ -170,6 +170,6 @@ func _on_Button22_pressed():
 
 
 	
-func _on_Timer_timeout():
+
 func _on_Timer_timeout():
 	get_tree().quit()
