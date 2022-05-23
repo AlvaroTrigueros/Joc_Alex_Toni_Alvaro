@@ -10,7 +10,7 @@ script = ExtResource( 3 )
 [node name="ColorRect5" type="ColorRect" parent="."]
 margin_right = 1041.0
 margin_bottom = 611.0
-color = Color( 1, 0.596078, 0.121569, 1 )
+color = Color( 0.968627, 0.623529, 0.219608, 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 430.0
