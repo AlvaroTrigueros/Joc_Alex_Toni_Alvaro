@@ -24,6 +24,10 @@ func _on_TextureButton_pressed():
 		get_tree().change_scene("res://inici.tscn")
 
 
+func _on_B_Guaita_Objecte_pressed():
+	get_tree().change_scene('res://Minijocs/Guaita_Objecte/Guaita_objecte.tscn')
+
+
 func _on_B_Ocell_Aletejador_pressed():
 	get_tree().change_scene("res://Minijocs/Ocell_Aletejador/Ocell_Aletejador.tscn")
 
@@ -51,3 +55,6 @@ func _on_TextureButton3_pressed():
 
 func _on_TextureButton6_pressed():
 	get_tree().change_scene('res://Minijocs/Joc Bola Rebotadora/explicacio_bola.tscn')
+
+
+

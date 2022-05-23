@@ -16,13 +16,13 @@ func _process(delta):
 		position.x += 4*60*delta
 	if Input.is_action_pressed("FLETXA_ESQUERRA") and position.x > 0:
 		position.x -= 6*60*delta
-	if position.y < 90:
-		position.y = 90
-	if position.y > 510:
-		position.y = 510
+	if position.y < 70:
+		position.y = 70
+	if position.y > 530:
+		position.y = 530
 		
-	if position.x < 50:
-		position.x = 50
-	if position.x > 1000:
-		position.x = 1000
+	if position.x < 80:
+		position.x = 80
+	if position.x > 920:
+		position.x = 920
 

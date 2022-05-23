@@ -13,7 +13,7 @@ extents = Vector2( 147.5, 68.5 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-rotation = -1.5708
+rotation = 1.5708
 scale = Vector2( 0.293629, 0.310909 )
 texture = ExtResource( 1 )
 __meta__ = {
@@ -31,3 +31,5 @@ __meta__ = {
 [node name="Collision_cotxe" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, 0.5 )
 shape = SubResource( 2 )
+
+[connection signal="area_shape_entered" from="Area_cotxe" to="." method="_on_Area_cotxe_area_shape_entered"]

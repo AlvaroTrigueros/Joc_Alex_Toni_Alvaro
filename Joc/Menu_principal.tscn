@@ -116,6 +116,7 @@ scale = Vector2( 0.101065, 0.101065 )
 texture = ExtResource( 2 )
 
 [connection signal="pressed" from="B_Ocell_Aletejador" to="." method="_on_B_Ocell_Aletejador_pressed"]
+[connection signal="pressed" from="B_Guaita_Objecte" to="." method="_on_B_Guaita_Objecte_pressed"]
 [connection signal="pressed" from="B_Tir_A_Llauna" to="." method="_on_B_Tir_A_Llauna_pressed"]
 [connection signal="pressed" from="B_Tir_A_Llauna/TextureButton3" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="B_Lluita_Sables" to="." method="_on_B_Lluita_Sables_pressed"]

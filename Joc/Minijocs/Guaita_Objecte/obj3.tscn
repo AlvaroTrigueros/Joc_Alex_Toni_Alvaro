@@ -4,31 +4,34 @@
 [ext_resource path="res://Minijocs/Guaita_Objecte/obj_1.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 234.5, 106.001 )
+extents = Vector2( 175.5, 90 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 232.25, 105 )
+extents = Vector2( 173.75, 90.25 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 7.00793, 1.33482 )
 rotation = 1.5708
+scale = Vector2( 0.829694, 0.761063 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Collision_cotxe" type="CollisionShape2D" parent="."]
-position = Vector2( 0.499992, -7.62939e-06 )
-rotation = 3.14159
-shape = SubResource( 2 )
-
 [node name="Area_cotxe" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_cotxe"]
-rotation = 3.14159
-shape = SubResource( 1 )
+position = Vector2( -1.5, 0 )
+shape = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Collision_cotxe2" type="CollisionShape2D" parent="."]
+position = Vector2( -2, 0 )
+shape = SubResource( 1 )
+
+[connection signal="area_shape_entered" from="Area_cotxe" to="." method="_on_Area_cotxe_area_shape_entered"]
