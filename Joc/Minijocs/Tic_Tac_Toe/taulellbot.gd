@@ -144,7 +144,7 @@ func _on_Button00_pressed():
 		$"Button(0,0)/Cercle00".visible = true
 		comencar -= 1
 		$"Button(0,0)".disabled = true
-	butons.remove(1)
+	butons.erase(1)
 func _on_Button10_pressed():
 	$RichTextLabel.set_text('')
 	$"Button(1,0)".pressed = true
@@ -156,7 +156,7 @@ func _on_Button10_pressed():
 		$"Button(1,0)/Cercle10".visible = true
 		comencar -= 1
 		$"Button(1,0)".disabled = true
-	butons.remove(2)
+	butons.erase(2)
 
 func _on_Button20_pressed():
 	$"Button(2,0)".pressed = true
@@ -169,7 +169,7 @@ func _on_Button20_pressed():
 		$"Button(2,0)/Cercle20".visible = true
 		comencar -= 1
 		$"Button(2,0)".disabled = true
-	butons.remove(3)
+	butons.erase(3)
 func _on_Button01_pressed():
 	$"Button(0,1)".pressed = true
 	$RichTextLabel.set_text('')
@@ -181,7 +181,7 @@ func _on_Button01_pressed():
 		$"Button(0,1)/Cercle01".visible = true
 		comencar -= 1
 		$"Button(0,1)".disabled = true
-	butons.remove(4)
+	butons.erase(4)
 func _on_Button11_pressed():
 	$"Button(1,1)".pressed = true
 	$RichTextLabel.set_text('')
@@ -193,7 +193,7 @@ func _on_Button11_pressed():
 		$"Button(1,1)/Cercle11".visible = true
 		comencar -= 1
 		$"Button(1,1)".disabled = true
-	butons.remove(5)
+	butons.erase(5)
 func _on_Button21_pressed():
 	$"Button(2,1)".pressed = true
 	$RichTextLabel.set_text('')
@@ -205,7 +205,7 @@ func _on_Button21_pressed():
 		$"Button(2,1)/Cercle21".visible = true
 		comencar -= 1
 		$"Button(2,1)".disabled = true
-	butons.remove(6)
+	butons.erase(6)
 func _on_Button02_pressed():
 	$"Button(0,2)".pressed = true
 	$RichTextLabel.set_text('')
@@ -217,7 +217,7 @@ func _on_Button02_pressed():
 		$"Button(0,2)/Cercle02".visible = true
 		comencar -= 1
 		$"Button(0,2)".disabled = true
-	butons.remove(7)
+	butons.erase(7)
 func _on_Button12_pressed():
 	$"Button(1,2)".pressed = true
 	$RichTextLabel.set_text('')
@@ -229,7 +229,7 @@ func _on_Button12_pressed():
 		$"Button(1,2)/Cercle12".visible = true
 		comencar -= 1
 		$"Button(1,2)".disabled = true
-	butons.remove(8)
+	butons.erase(8)
 func _on_Button22_pressed():
 	$"Button(2,2)".pressed = true
 	$RichTextLabel.set_text('')
@@ -241,7 +241,7 @@ func _on_Button22_pressed():
 		$"Button(2,2)/Cercle22".visible = true
 		comencar -= 1
 		$"Button(2,2)".disabled = true
-	butons.remove(9)
+	butons.erase(9)
 
 	
 func _on_Timer_timeout():
