@@ -49,6 +49,7 @@ func _on_B_Brakeout_pressed():
 
 
 
+
 func _on_TextureButton3_pressed():
 	get_tree().change_scene('res://Minijocs/Tir_a_la_llauna/explicacio_tir.tscn')
 
@@ -57,4 +58,17 @@ func _on_TextureButton6_pressed():
 	get_tree().change_scene('res://Minijocs/Joc Bola Rebotadora/explicacio_bola.tscn')
 
 
+func _on_TextureButton4_pressed():
+	get_tree().change_scene("res://Minijocs/Lluita_de_sables/explicacio_sables.tscn")
 
+
+func _on_TextureButton10_pressed():
+	get_tree().change_scene("res://Minijocs/Ocell_Aletejador/explicacio_ocell.tscn")
+
+
+func _on_TextureButton2_pressed():
+	get_tree().change_scene("res://Minijocs/Guaita_Objecte/explicacio_cotxe.tscn")
+
+
+func _on_TextureButton5_pressed():
+	get_tree().change_scene("res://Minijocs/Tic_Tac_Toe/explicacio_ttt.tscn")

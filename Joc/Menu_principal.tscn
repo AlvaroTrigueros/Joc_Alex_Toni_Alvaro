@@ -20,7 +20,7 @@ margin_right = 662.0
 margin_bottom = 222.0
 rect_pivot_offset = Vector2( 110, 64 )
 
-[node name="TextureButton" type="TextureButton" parent="B_Ocell_Aletejador"]
+[node name="TextureButton10" type="TextureButton" parent="B_Ocell_Aletejador"]
 margin_left = 133.0
 margin_top = 167.0
 margin_right = 167.0
@@ -116,11 +116,15 @@ scale = Vector2( 0.101065, 0.101065 )
 texture = ExtResource( 2 )
 
 [connection signal="pressed" from="B_Ocell_Aletejador" to="." method="_on_B_Ocell_Aletejador_pressed"]
+[connection signal="pressed" from="B_Ocell_Aletejador/TextureButton10" to="." method="_on_TextureButton10_pressed"]
 [connection signal="pressed" from="B_Guaita_Objecte" to="." method="_on_B_Guaita_Objecte_pressed"]
+[connection signal="pressed" from="B_Guaita_Objecte/TextureButton2" to="." method="_on_TextureButton2_pressed"]
 [connection signal="pressed" from="B_Tir_A_Llauna" to="." method="_on_B_Tir_A_Llauna_pressed"]
 [connection signal="pressed" from="B_Tir_A_Llauna/TextureButton3" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="B_Lluita_Sables" to="." method="_on_B_Lluita_Sables_pressed"]
+[connection signal="pressed" from="B_Lluita_Sables/TextureButton4" to="." method="_on_TextureButton4_pressed"]
 [connection signal="pressed" from="B_Tic_Tac_Toe" to="." method="_on_B_Tic_Tac_Toe_pressed"]
+[connection signal="pressed" from="B_Tic_Tac_Toe/TextureButton5" to="." method="_on_TextureButton5_pressed"]
 [connection signal="pressed" from="B_Brakeout" to="." method="_on_B_Brakeout_pressed"]
 [connection signal="pressed" from="B_Brakeout/TextureButton6" to="." method="_on_TextureButton6_pressed"]
 [connection signal="pressed" from="B_Settings" to="." method="_on_B_Settings_pressed"]
