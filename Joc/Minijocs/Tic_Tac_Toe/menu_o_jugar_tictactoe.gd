@@ -18,7 +18,7 @@ func _on_menu_pressed():
 
 
 func _on_replay_pressed():
-	get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/taulell.tscn')
+	get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/bot_o_1v1.tscn')
 
 
 func _on_menu1_pressed():
@@ -27,4 +27,4 @@ func _on_menu1_pressed():
 
 
 func _on_replay1_pressed():
-	get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/taulell.tscn')
+	get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/bot_o_1v1.tscn')

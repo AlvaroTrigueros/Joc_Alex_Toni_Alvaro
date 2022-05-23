@@ -231,3 +231,13 @@ texture = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[connection signal="pressed" from="Button(0,0)" to="." method="_on_Button00_pressed"]
+[connection signal="pressed" from="Button(1,0)" to="." method="_on_Button10_pressed"]
+[connection signal="pressed" from="Button(2,0)" to="." method="_on_Button20_pressed"]
+[connection signal="pressed" from="Button(0,1)" to="." method="_on_Button01_pressed"]
+[connection signal="pressed" from="Button(1,1)" to="." method="_on_Button11_pressed"]
+[connection signal="pressed" from="Button(2,1)" to="." method="_on_Button21_pressed"]
+[connection signal="pressed" from="Button(0,2)" to="." method="_on_Button02_pressed"]
+[connection signal="pressed" from="Button(1,2)" to="." method="_on_Button12_pressed"]
+[connection signal="pressed" from="Button(2,2)" to="." method="_on_Button22_pressed"]

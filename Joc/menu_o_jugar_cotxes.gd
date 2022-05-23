@@ -16,5 +16,8 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
+func _on_TextureButton_pressed():
 	get_tree().change_scene("res://Menu_principal.tscn")
+
+func _on_TextureButton2_pressed():
+	get_tree().change_scene('res://Minijocs/Guaita_Objecte/Guaita_objecte.tscn')

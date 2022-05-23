@@ -37,7 +37,7 @@ func _on_B_Lluita_Sables_pressed():
 
 
 func _on_B_Tic_Tac_Toe_pressed():
-	get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/taulell.tscn')
+	get_tree().change_scene('res://Minijocs/Tic_Tac_Toe/bot_o_1v1.tscn')
 
 
 func _on_B_Tir_A_Llauna_pressed():
