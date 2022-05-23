@@ -1,0 +1,146 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/P1WINS-removebg-preview.png" type="Texture" id=1]
+[ext_resource path="res://menu_o_jugar.png" type="Texture" id=2]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Background/example.png" type="Texture" id=3]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Background/Plataforma.png" type="Texture" id=4]
+[ext_resource path="res://Minijocs/Lluita_de_sables/P1Guanya.gd" type="Script" id=7]
+[ext_resource path="res://Minijocs/Lluita_de_sables/TextureButton2.gd" type="Script" id=8]
+[ext_resource path="res://Minijocs/Lluita_de_sables/TextureButton.gd" type="Script" id=9]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/Quit-removebg-preview.png" type="Texture" id=10]
+[ext_resource path="res://Minijocs/Lluita_de_sables/Barravida/Again-removebg-preview.png" type="Texture" id=11]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 1026, 600 )
+b = Vector2( -1, 600 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 49.125, 6.375 )
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/Plataforma.png-531480c8632736ba4989a9b79e27a2a4.stex"
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 49.125, 6.375 )
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/Plataforma.png-531480c8632736ba4989a9b79e27a2a4.stex"
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 49.125, 6.375 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 140.5, 11.25 )
+
+[node name="Lluita de sables" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 515.25, 336 )
+scale = Vector2( 0.599827, 0.616667 )
+texture = ExtResource( 3 )
+
+[node name="Plataforma" type="Sprite" parent="Background"]
+position = Vector2( -243.714, 252.973 )
+scale = Vector2( 1.2522, 1.51324 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -3, 2 )
+shape = SubResource( 1 )
+
+[node name="Plataformes" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Plataformes"]
+position = Vector2( -25, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Plataformes/StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformes/StaticBody2D"]
+position = Vector2( 406, 486 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Plataformes"]
+position = Vector2( 1132, 87 )
+scale = Vector2( -1, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Plataformes/StaticBody2D2"]
+position = Vector2( 600.75, 460 )
+scale = Vector2( 0.818519, 0.733333 )
+texture = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformes/StaticBody2D2"]
+position = Vector2( 598.25, 458 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Plataformes"]
+position = Vector2( 259, -47 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Plataformes/StaticBody2D3"]
+position = Vector2( 600.75, 460 )
+scale = Vector2( 0.818519, 0.733333 )
+texture = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformes/StaticBody2D3"]
+position = Vector2( 598.25, 458 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Plataformes"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformes/StaticBody2D4"]
+position = Vector2( 153.5, 429.75 )
+shape = SubResource( 7 )
+
+[node name="Quit" type="Sprite" parent="."]
+position = Vector2( 982, 50 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 10 )
+
+[node name="Again" type="Sprite" parent="."]
+position = Vector2( 982, 135 )
+scale = Vector2( 0.13, 0.13 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 2 )
+
+[node name="textagain" type="TextureButton" parent="."]
+margin_left = 514.0
+margin_top = 340.0
+margin_right = 894.0
+margin_bottom = 496.0
+script = ExtResource( 8 )
+
+[node name="textquit" type="TextureButton" parent="."]
+margin_left = 151.0
+margin_top = 344.0
+margin_right = 477.0
+margin_bottom = 493.0
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.992157, 0.992157, 0.992157, 1 )
+position = Vector2( 507, 214 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+
+[connection signal="pressed" from="textagain" to="textagain" method="_on_textagain_pressed"]
+[connection signal="pressed" from="textquit" to="textquit" method="_on_textquit_pressed"]

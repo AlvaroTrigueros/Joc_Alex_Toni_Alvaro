@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 509.5, 5 )
+
+[node name="Terra" type="Area2D"]
+
+[node name="terra_superior" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 10.0
+color = Color( 0.470588, 0.682353, 0.831373, 1 )
+
+[node name="CollisionShape_superior" type="CollisionShape2D" parent="."]
+position = Vector2( 509.5, -1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape_inferior" type="CollisionShape2D" parent="."]
+position = Vector2( 512, 594 )
+shape = SubResource( 1 )
