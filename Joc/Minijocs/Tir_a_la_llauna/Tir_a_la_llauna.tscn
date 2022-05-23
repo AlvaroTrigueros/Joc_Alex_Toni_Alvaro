@@ -38,6 +38,7 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.82857, 2.20588 )
 frames = SubResource( 1 )
 animation = "animacio_fons"
+frame = 2
 playing = true
 
 [node name="Marcador" parent="." instance=ExtResource( 3 )]
@@ -82,8 +83,8 @@ position = Vector2( 511.829, 687.063 )
 [node name="Pantalla_mort" type="RichTextLabel" parent="Menu_mort"]
 margin_left = -959.0
 margin_top = -454.0
-margin_right = 159.0
-margin_bottom = -135.0
+margin_right = 66.0
+margin_bottom = -206.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
