@@ -1,9 +1,7 @@
 extends Node2D
-
-
-# Declare member variables here. Examples:
 var comencar = 0
 var t = 0.5
+var butons = [1,2,3,4,5,6,7,8,9]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -11,11 +9,9 @@ func _ready():
 	comencar = rand_range(0,1)
 	print(comencar)
 	if comencar < 0.5:
-		print('Comencen les Creus!')
-		$RichTextLabel.set_text('Comencen les X!')
+		$RichTextLabel.set_text('Comences tu!')
 	else:
-		print('Comencen les Rodones!')
-		$RichTextLabel.set_text('Comencen les O!')
+		$RichTextLabel.set_text('Comença el bot!')
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if $"Button(0,0)/Creu00".visible == true and $"Button(1,0)/Creu10".visible == true and $"Button(2,0)/Creu20".visible == true or $"Button(0,0)/Creu00".visible == true and $"Button(0,1)/Creu01".visible == true and $"Button(0,2)/Creu02".visible == true :
@@ -58,7 +54,33 @@ func _process(_delta):
 		yield(get_tree().create_timer(2.0), "timeout")
 		get_tree().reload_current_scene()
 		
-
+	
+	if comencar > 0.5:
+		var a = randi()% 9 + 1
+		for x in butons:
+			if a in butons:
+				if a == 1:
+					pass
+				if a == 2:
+					pass
+				if a == 3:
+					pass
+				if a == 4:
+					pass
+				if a == 5:
+					pass
+				if a == 6:
+					pass
+				if a == 7:
+					pass
+				if a == 8:
+					pass
+				if a == 9:
+					pass
+				var nom_boto = "$Button()"
+				nom_boto.emit_signal("pressed")
+			else:
+				pass
 
 func _on_Button00_pressed():
 	$"Button(0,0)".pressed = true
@@ -71,7 +93,7 @@ func _on_Button00_pressed():
 		$"Button(0,0)/Cercle00".visible = true
 		comencar -= 1
 		$"Button(0,0)".disabled = true
-
+	butons.remove(1)
 func _on_Button10_pressed():
 	$RichTextLabel.set_text('')
 	$"Button(1,0)".pressed = true
@@ -83,6 +105,7 @@ func _on_Button10_pressed():
 		$"Button(1,0)/Cercle10".visible = true
 		comencar -= 1
 		$"Button(1,0)".disabled = true
+	butons.remove(2)
 
 func _on_Button20_pressed():
 	$"Button(2,0)".pressed = true
@@ -95,7 +118,7 @@ func _on_Button20_pressed():
 		$"Button(2,0)/Cercle20".visible = true
 		comencar -= 1
 		$"Button(2,0)".disabled = true
-
+	butons.remove(3)
 func _on_Button01_pressed():
 	$"Button(0,1)".pressed = true
 	$RichTextLabel.set_text('')
@@ -107,7 +130,7 @@ func _on_Button01_pressed():
 		$"Button(0,1)/Cercle01".visible = true
 		comencar -= 1
 		$"Button(0,1)".disabled = true
-
+	butons.remove(4)
 func _on_Button11_pressed():
 	$"Button(1,1)".pressed = true
 	$RichTextLabel.set_text('')
@@ -119,7 +142,7 @@ func _on_Button11_pressed():
 		$"Button(1,1)/Cercle11".visible = true
 		comencar -= 1
 		$"Button(1,1)".disabled = true
-
+	butons.remove(5)
 func _on_Button21_pressed():
 	$"Button(2,1)".pressed = true
 	$RichTextLabel.set_text('')
@@ -131,7 +154,7 @@ func _on_Button21_pressed():
 		$"Button(2,1)/Cercle21".visible = true
 		comencar -= 1
 		$"Button(2,1)".disabled = true
-
+	butons.remove(6)
 func _on_Button02_pressed():
 	$"Button(0,2)".pressed = true
 	$RichTextLabel.set_text('')
@@ -143,7 +166,7 @@ func _on_Button02_pressed():
 		$"Button(0,2)/Cercle02".visible = true
 		comencar -= 1
 		$"Button(0,2)".disabled = true
-
+	butons.remove(7)
 func _on_Button12_pressed():
 	$"Button(1,2)".pressed = true
 	$RichTextLabel.set_text('')
@@ -155,7 +178,7 @@ func _on_Button12_pressed():
 		$"Button(1,2)/Cercle12".visible = true
 		comencar -= 1
 		$"Button(1,2)".disabled = true
-
+	butons.remove(8)
 func _on_Button22_pressed():
 	$"Button(2,2)".pressed = true
 	$RichTextLabel.set_text('')
@@ -167,9 +190,8 @@ func _on_Button22_pressed():
 		$"Button(2,2)/Cercle22".visible = true
 		comencar -= 1
 		$"Button(2,2)".disabled = true
-
+	butons.remove(9)
 
 	
-func _on_Timer_timeout():
 func _on_Timer_timeout():
 	get_tree().quit()
