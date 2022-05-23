@@ -1,22 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Minijocs/Guaita_Objecte/Gràfics/obj1.png" type="Texture" id=1]
+[ext_resource path="res://Minijocs/Guaita_Objecte/obj_1.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 146.5, 68 )
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 147.5, 68.5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-rotation = 4.71239
+rotation = -1.5708
 scale = Vector2( 0.293629, 0.310909 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Area_cotxe" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_cotxe"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision_cotxe" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 0.5 )
+shape = SubResource( 2 )
