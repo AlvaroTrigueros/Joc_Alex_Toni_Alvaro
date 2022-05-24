@@ -54,84 +54,203 @@ func _process(_delta):
 		yield(get_tree().create_timer(2.0), "timeout")
 		get_tree().reload_current_scene()
 		
+		
 	if comencar > 0.5:
-		if $"Button(1,1)/Cercle11".visible == false and $"Button(1,1)/Creu11".visible == false:
+		if $"Button(0,0)/Cercle00".visible == true and $"Button(0,1)/Cercle01".visible == true and $"Button(0,2)".pressed == false:
+			$"Button(0,2)".emit_signal("pressed")
+		
+		elif $"Button(0,1)/Cercle01".visible == true and $"Button(0,2)/Cercle02".visible == true and $"Button(0,0)".pressed == false:
+			$"Button(0,0)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Cercle00".visible == true and $"Button(0,2)/Cercle02".visible == true and $"Button(0,1)".pressed == false:
+			$"Button(0,1)".emit_signal("pressed")
+		
+		elif $"Button(1,0)/Cercle10".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(1,2)".pressed == false:
+			$"Button(1,2)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Cercle11".visible == true and $"Button(1,2)/Cercle12".visible == true and $"Button(1,0)".pressed == false:
+			$"Button(1,0)".emit_signal("pressed")
+		
+		elif $"Button(1,0)/Cercle10".visible == true and $"Button(1,2)/Cercle12".visible == true and $"Button(1,1)".pressed == false:
 			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(2,0)/Cercle20".visible == true and $"Button(2,1)/Cercle21".visible == true and $"Button(2,2)".pressed == false:
+			$"Button(2,2)".emit_signal("pressed")
+		
+		elif $"Button(2,1)/Cercle21".visible == true and $"Button(2,2)/Cercle22".visible == true and $"Button(2,0)".pressed == false:
+			$"Button(2,0)".emit_signal("pressed")
+		
+		elif $"Button(2,0)/Cercle20".visible == true and $"Button(2,2)/Cercle22".visible == true and $"Button(2,1)".pressed == false:
+			$"Button(2,1)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Cercle00".visible == true and $"Button(1,0)/Cercle10".visible == true and $"Button(2,0)".pressed == false:
+			$"Button(2,0)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Cercle00".visible == true and $"Button(2,0)/Cercle20".visible == true and $"Button(1,0)".pressed == false:
+			$"Button(1,0)".emit_signal("pressed")
+		
+		elif $"Button(1,0)/Cercle10".visible == true and $"Button(2,0)/Cercle20".visible == true and $"Button(0,0)".pressed == false:
+			$"Button(0,0)".emit_signal("pressed")
+		
+		elif $"Button(0,1)/Cercle01".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(2,1)".pressed == false:
+			$"Button(2,1)".emit_signal("pressed")
+		
+		elif $"Button(0,1)/Cercle01".visible == true and $"Button(2,1)/Cercle21".visible == true and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Cercle11".visible == true and $"Button(2,1)/Cercle21".visible == true and $"Button(0,1)".pressed == false:
+			$"Button(0,1)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Cercle02".visible == true and $"Button(1,2)/Cercle12".visible == true and $"Button(2,2)".pressed == false:
+			$"Button(2,2)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Cercle02".visible == true and $"Button(2,2)/Cercle22".visible == true and $"Button(1,2)".pressed == false:
+			$"Button(1,2)".emit_signal("pressed")
+		
+		elif $"Button(1,2)/Cercle12".visible == true and $"Button(2,2)/Cercle22".visible == true and $"Button(0,2)".pressed == false:
+			$"Button(0,2)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Cercle00".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(2,2)".pressed == false:
+			$"Button(2,2)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Cercle00".visible == true and $"Button(2,2)/Cercle22".visible == true and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Cercle11".visible == true and $"Button(2,2)/Cercle22".visible == true and $"Button(0,0)".pressed == false:
+			$"Button(0,0)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Cercle02".visible == true and $"Button(1,1)/Cercle11".visible == true and $"Button(2,0)".pressed == false:
+			$"Button(2,0)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Cercle02".visible == true and $"Button(2,0)/Cercle20".visible == true and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Cercle11".visible == true and $"Button(2,0)/Cercle20".visible == true and $"Button(0,2)".pressed == false:
+			$"Button(0,2)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Creu00".visible == true and $"Button(0,1)/Creu01".visible == true and $"Button(0,2)".pressed == false:
+			$"Button(0,2)".emit_signal("pressed")
+		
+		elif $"Button(0,1)/Creu01".visible == true and $"Button(0,2)/Creu02".visible == true and $"Button(0,0)".pressed == false:
+			$"Button(0,0)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Creu00".visible == true and $"Button(0,2)/Creu02".visible == true and $"Button(0,1)".pressed == false:
+			$"Button(0,1)".emit_signal("pressed")
+		
+		elif $"Button(1,0)/Creu10".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(1,2)".pressed == false:
+			$"Button(1,2)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Creu11".visible == true and $"Button(1,2)/Creu12".visible == true and $"Button(1,0)".pressed == false:
+			$"Button(1,0)".emit_signal("pressed")
+		
+		elif $"Button(1,0)/Creu10".visible == true and $"Button(1,2)/Creu12".visible == true and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(2,0)/Creu20".visible == true and $"Button(2,1)/Creu21".visible == true and $"Button(2,2)".pressed == false:
+			$"Button(2,2)".emit_signal("pressed")
+		
+		elif $"Button(2,1)/Creu21".visible == true and $"Button(2,2)/Creu22".visible == true and $"Button(2,0)".pressed == false:
+			$"Button(2,0)".emit_signal("pressed")
+		
+		elif $"Button(2,0)/Creu20".visible == true and $"Button(2,2)/Creu22".visible == true and $"Button(2,1)".pressed == false:
+			$"Button(2,1)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Creu00".visible == true and $"Button(1,0)/Creu10".visible == true and $"Button(2,0)".pressed == false:
+			$"Button(2,0)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Creu00".visible == true and $"Button(2,0)/Creu20".visible == true and $"Button(1,0)".pressed == false:
+			$"Button(1,0)".emit_signal("pressed")
+		
+		elif $"Button(1,0)/Creu10".visible == true and $"Button(2,0)/Creu20".visible == true and $"Button(0,0)".pressed == false:
+			$"Button(0,0)".emit_signal("pressed")
+		
+		elif $"Button(0,1)/Creu01".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(2,1)".pressed == false:
+			$"Button(2,1)".emit_signal("pressed")
+		
+		elif $"Button(0,1)/Creu01".visible == true and $"Button(2,1)/Creu21".visible == true and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Creu11".visible == true and $"Button(2,1)/Creu21".visible == true and $"Button(0,1)".pressed == false:
+			$"Button(0,1)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Creu02".visible == true and $"Button(1,2)/Creu12".visible == true and $"Button(2,2)".pressed == false:
+			$"Button(2,2)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Creu02".visible == true and $"Button(2,2)/Creu22".visible == true and $"Button(1,2)".pressed == false:
+			$"Button(1,2)".emit_signal("pressed")
+		
+		elif $"Button(1,2)/Creu12".visible == true and $"Button(2,2)/Creu22".visible == true and $"Button(0,2)".pressed == false:
+			$"Button(0,2)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Creu00".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(2,2)".pressed == false:
+			$"Button(2,2)".emit_signal("pressed")
+		
+		elif $"Button(0,0)/Creu00".visible == true and $"Button(2,2)/Creu22".visible == true and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Creu11".visible == true and $"Button(2,2)/Creu22".visible == true and $"Button(0,0)".pressed == false:
+			$"Button(0,0)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Creu02".visible == true and $"Button(1,1)/Creu11".visible == true and $"Button(2,0)".pressed == false:
+			$"Button(2,0)".emit_signal("pressed")
+		
+		elif $"Button(0,2)/Creu02".visible == true and $"Button(2,0)/Creu20".visible == true and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		
+		elif $"Button(1,1)/Creu11".visible == true and $"Button(2,0)/Creu20".visible == true and $"Button(0,2)".pressed == false:
+			$"Button(0,2)".emit_signal("pressed")
+		
 			
-		elif $"Button(1,1)/Cercle11".visible == true or $"Button(1,1)/Creu11".visible == true:
-			if ($"Button(0,0)/Cercle00".visible == true or $"Button(0,0)/Creu00".visible == true) and ($"Button(2,0)/Cercle20".visible == true or $"Button(2,0)/Creu20".visible == true) and ($"Button(0,2)/Cercle02".visible == true or $"Button(0,2)/Creu02".visible == true) and ($"Button(2,2)/Cercle22".visible == true or $"Button(2,2)/Creu22".visible == true):
-				var a = randi()% 9 + 1
-				for x in butons:
-					if a == x:
-						if a == 1:
-							$"Button(0,0)".emit_signal("pressed")
-						if a == 2:
-							$"Button(1,0)".emit_signal("pressed")
-						if a == 3:
-							$"Button(2,0)".emit_signal("pressed")
-						if a == 4:
-							$"Button(0,1)".emit_signal("pressed")
-						if a == 5:
-							$"Button(1,1)".emit_signal("pressed")
-						if a == 6:
-							$"Button(2,1)".emit_signal("pressed")
-						if a == 7:
-							$"Button(0,2)".emit_signal("pressed")
-						if a == 8:
-							$"Button(1,2)".emit_signal("pressed")
-						if a == 9:
-							$"Button(2,2)".emit_signal("pressed")
-					else:
-						pass
-			else:
-				var b = randi()%40 + 10
-				print(b)
-				if b == 10:
-					b = 1
-				if b == 20:
-					b = 3
-				if b == 30:
-					b = 7
-				if b == 40:
-					b = 9
-				for x in butons:
-					if b == x:
-						if b == 1:
-							$"Button(0,0)".emit_signal("pressed")
-						if b == 3:
-							$"Button(2,0)".emit_signal("pressed")
-						if b == 7:
-							$"Button(0,2)".emit_signal("pressed")
-						if b == 9:
-							$"Button(2,2)".emit_signal("pressed")
-					
-	
-#	if comencar > 0.5:
-#		var a = randi()% 9 + 1
-#		for x in butons:
-#			if a in butons:
-#				if a == 1:
-#					pass
-#				if a == 2:
-#					pass
-#				if a == 3:
-#					pass
-#				if a == 4:
-#					pass
-#				if a == 5:
-#					pass
-#				if a == 6:
-#					pass
-#				if a == 7:
-#					pass
-#				if a == 8:
-#					pass
-#				if a == 9:
-#					pass
-#				var nom_boto = "$Button()"
-#				nom_boto.emit_signal("pressed")
-#			else:
-#				pass
+		else:
+			if $"Button(1,1)/Cercle11".visible == false and $"Button(1,1)/Creu11".visible == false:
+				$"Button(1,1)".emit_signal("pressed")
+				
+			elif $"Button(1,1)/Cercle11".visible == true or $"Button(1,1)/Creu11".visible == true:
+				if ($"Button(0,0)/Cercle00".visible == true or $"Button(0,0)/Creu00".visible == true) and ($"Button(2,0)/Cercle20".visible == true or $"Button(2,0)/Creu20".visible == true) and ($"Button(0,2)/Cercle02".visible == true or $"Button(0,2)/Creu02".visible == true) and ($"Button(2,2)/Cercle22".visible == true or $"Button(2,2)/Creu22".visible == true):
+					var a = randi()% 9 + 1
+					for x in butons:
+						if a == x:
+							if a == 1:
+								$"Button(0,0)".emit_signal("pressed")
+							if a == 2:
+								$"Button(1,0)".emit_signal("pressed")
+							if a == 3:
+								$"Button(2,0)".emit_signal("pressed")
+							if a == 4:
+								$"Button(0,1)".emit_signal("pressed")
+							if a == 5:
+								$"Button(1,1)".emit_signal("pressed")
+							if a == 6:
+								$"Button(2,1)".emit_signal("pressed")
+							if a == 7:
+								$"Button(0,2)".emit_signal("pressed")
+							if a == 8:
+								$"Button(1,2)".emit_signal("pressed")
+							if a == 9:
+								$"Button(2,2)".emit_signal("pressed")
+						else:
+							pass
+				else:
+					var c : int
+					var b = rand_range(0,4)
+					if b <= 1:
+						c = 1
+					if b > 1 and b <= 2:
+						c = 3
+					if b > 2 and b <= 3:
+						c = 7
+					if b > 3 and b <= 4:
+						c = 9
+					for x in butons:
+						if c == x:
+							if c == 1:
+								$"Button(0,0)".emit_signal("pressed")
+							if c == 3:
+								$"Button(2,0)".emit_signal("pressed")
+							if c == 7:
+								$"Button(0,2)".emit_signal("pressed")
+							if c == 9:
+								$"Button(2,2)".emit_signal("pressed")
 
 func _on_Button00_pressed():
 	$"Button(0,0)".pressed = true
