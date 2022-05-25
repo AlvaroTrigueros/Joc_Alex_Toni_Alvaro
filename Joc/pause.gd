@@ -11,10 +11,11 @@ func set_is_paused(value):
 	is_paused = value
 	get_tree().paused = is_paused
 	visible = is_paused
+	$JocPausat.visible = true
 
 func _on_mainmenu_pressed():
 	get_tree().change_scene("res://Menu_principal.tscn")
-
+	self.is_paused = false
 
 func _on_continue_pressed():
 	self.is_paused = false

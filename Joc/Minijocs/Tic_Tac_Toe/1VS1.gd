@@ -18,3 +18,7 @@ func _ready():
 
 func _on_1VS1_pressed():
 	get_tree().change_scene("res://Minijocs/Tic_Tac_Toe/taulell.tscn")
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://Menu_principal.tscn")

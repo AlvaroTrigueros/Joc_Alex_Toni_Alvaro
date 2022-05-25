@@ -26,7 +26,7 @@ func _ready():
 	$Cotxe.scale = escala
 	cotxes = genera_cotxes()
 	#print(cotxes)
-	
+	$Control.visible = false
 	
 func _process(delta):
 	temps += 1 * delta
@@ -46,7 +46,7 @@ func _process(delta):
 		NouCotxe.connect('mort', self, '_on_Area_cotxe_area_shape_entered')
 		NouCotxe.velocitat_cotxe = Vector2(200, rand_range(-100, 100))
 		NouCotxe.scale = escala
-		add_child(NouCotxe)
+		$cotxes.add_child(NouCotxe)
 		cotxes.erase(cotxes[0])
 
 func genera_cotxes():

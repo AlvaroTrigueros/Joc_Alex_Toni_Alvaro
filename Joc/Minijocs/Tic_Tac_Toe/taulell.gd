@@ -6,7 +6,7 @@ var comencar = 0
 var t = 0.5
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	$Control.visible = false
 	randomize()
 	comencar = rand_range(0,1)
 	print(comencar)

@@ -14,7 +14,7 @@ var guarda_punuacio = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	$Control.visible = false
 	#print(llista_puntuacions)
 	$Menu_mort.visible = false
 	$Menu_mort/TornarAJugar.text = 'TORNA A JUGAR'

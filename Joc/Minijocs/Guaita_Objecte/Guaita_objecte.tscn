@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Minijocs/Guaita_Objecte/Gràfics/carretera2.png" type="Texture" id=1]
 [ext_resource path="res://Minijocs/Guaita_Objecte/Gràfics/carretera1.png" type="Texture" id=2]
 [ext_resource path="res://Minijocs/Guaita_Objecte/Carretera.gd" type="Script" id=3]
 [ext_resource path="res://Minijocs/Guaita_Objecte/Cotxe.tscn" type="PackedScene" id=4]
+[ext_resource path="res://joc_pausat.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Minijocs/Guaita_Objecte/Guaita_objecte.gd" type="Script" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -49,3 +50,7 @@ script = ExtResource( 3 )
 
 [node name="Cotxe" parent="." instance=ExtResource( 4 )]
 position = Vector2( 812.112, 295.243 )
+
+[node name="cotxes" type="Node2D" parent="."]
+
+[node name="Control" parent="." instance=ExtResource( 5 )]

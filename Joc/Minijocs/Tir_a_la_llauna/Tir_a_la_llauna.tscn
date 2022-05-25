@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/Tir_a_la_llauna.gd" type="Script" id=1]
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/Pistola.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/Menu_mort.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Minijocs/Ocell_Aletejador/Textures_ocell_aletejador/ADOBEGOTHICSTD-BOLD.OTF" type="DynamicFontData" id=15]
 [ext_resource path="res://Minijocs/Tir_a_la_llauna/textures_tir_a_la_llauna/textura_cors.tscn" type="PackedScene" id=16]
+[ext_resource path="res://joc_pausat.tscn" type="PackedScene" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -38,7 +39,7 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.82857, 2.20588 )
 frames = SubResource( 1 )
 animation = "animacio_fons"
-frame = 2
+frame = 6
 playing = true
 
 [node name="Marcador" parent="." instance=ExtResource( 3 )]
@@ -88,5 +89,9 @@ margin_bottom = -206.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
+
+[node name="Bales" type="Node2D" parent="."]
+
+[node name="Control" parent="." instance=ExtResource( 17 )]
 
 [editable path="Marcador"]

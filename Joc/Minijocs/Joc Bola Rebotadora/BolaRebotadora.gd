@@ -17,14 +17,15 @@ func posar_blocs():
 		bloc.color = a
 		numero_blocs += 1
 		bloc.connect("mort", self, 'resta_bloc')
-		add_child(bloc)
+		$Joc.add_child(bloc)
 		
 				
 func _ready():
+	$Control.visible = false
 	randomize()
-	$Bola.position = Vector2(500, 555)
-	$Plataforma.position = Vector2(500,570)
-	$Plataforma.scale = Vector2(0.7,0.7)
+	$Joc/Bola.position = Vector2(500, 555)
+	$Joc/Plataforma.position = Vector2(500,570)
+	$Joc/Plataforma.scale = Vector2(0.7,0.7)
 	posar_blocs()
 
 func resta_bloc():

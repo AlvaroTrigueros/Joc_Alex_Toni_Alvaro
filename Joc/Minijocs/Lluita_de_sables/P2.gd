@@ -48,7 +48,7 @@ func anima(velocitat: Vector2):
 			elif Input.is_action_pressed("FLETXA_AVALL"):
 				animacio.play("ataca")
 				pegant = true
-			if $CanvasLayer/BarraVida2.value == 20:
+			if $Node2D/BarraVida2.value == 20:
 				animacio.play("mor")
 				morint = true
 		
@@ -66,4 +66,4 @@ func _on_EspasaP1_body_entered(body):
 	if Input.is_action_pressed("Protegeixte_LluitadeSables"):
 		pass
 	elif body.is_in_group("Personatge"):
-		$CanvasLayer/BarraVida2.value -= 20
+		$Node2D/BarraVida2.value -= 20

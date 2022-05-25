@@ -9,6 +9,7 @@ func _ready():
 		
 
 func _physics_process(delta):
+	$TextureProgress.rect_global_position = Vector2(400, 30)
 	if Input.is_action_just_released("ESPAI"):
 		moviment = true
 	if moviment == true:
@@ -35,11 +36,11 @@ func _physics_process(delta):
 					collision.collider.hit()
 			
 			
-	if $CanvasLayer/TextureProgress.value == 0:
+	if $TextureProgress.value == 0:
 		get_tree().change_scene("res://Minijocs//Joc Bola Rebotadora/GameOver.tscn")
 
 
 func _on_VisibilityNotifier2D_screen_exited():
 	$Bola.global_position = Vector2(500,555)
-	$CanvasLayer/TextureProgress.value -= 33
+	$TextureProgress.value -= 33
 	moviment = false

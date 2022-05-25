@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Minijocs/Tic_Tac_Toe/creubona.png" type="Texture" id=1]
 [ext_resource path="res://Minijocs/Tic_Tac_Toe/obona.png" type="Texture" id=2]
 [ext_resource path="res://Minijocs/Tic_Tac_Toe/taulell.gd" type="Script" id=3]
+[ext_resource path="res://joc_pausat.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -231,6 +232,8 @@ margin_bottom = 160.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="Control" parent="." instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="Button(0,0)" to="." method="_on_Button00_pressed"]
 [connection signal="pressed" from="Button(1,0)" to="." method="_on_Button10_pressed"]

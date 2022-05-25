@@ -4,20 +4,24 @@
 [ext_resource path="res://pause.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="JocPausat" type="Sprite" parent="."]
+pause_mode = 2
 position = Vector2( 512.056, 300 )
 scale = Vector2( 0.533391, 0.555556 )
 texture = ExtResource( 1 )
 
 [node name="continue" type="TextureButton" parent="."]
+pause_mode = 2
 margin_left = 395.0
 margin_top = 208.0
 margin_right = 638.0
 margin_bottom = 312.0
 
 [node name="mainmenu" type="TextureButton" parent="."]
+pause_mode = 2
 margin_left = 387.0
 margin_top = 349.0
 margin_right = 643.0

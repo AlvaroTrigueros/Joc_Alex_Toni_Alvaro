@@ -40,6 +40,7 @@ var llista_puntuacions = load_file(dic_high_score_tir_a_la_llauna)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Menu_mort.visible = false
+	$Control.visible = false
 	$Menu_mort/TornarAJugar.text = 'TORNA A JUGAR'
 	$Menu_mort/TornarAMenu.text = 'TORNA A INICI'
 	timing_llaunes = genera_temps_entre_llaunes()
@@ -87,7 +88,7 @@ func _process(delta):
 		Bala.global_position = animacio.global_position + Vector2(210, 30)
 		Bala.gravetat = 500
 		
-		add_child(Bala)
+		$Bales.add_child(Bala)
 		
 	precisio = calcula_precisio()
 	$Precisio.text = str(precisio) + '%'

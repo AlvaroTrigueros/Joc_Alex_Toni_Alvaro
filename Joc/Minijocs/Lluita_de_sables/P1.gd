@@ -11,6 +11,7 @@ func _ready():
 	position = Vector2(50,510)
 	$EspasaP1/CollisionEspasa.set_deferred("disabled", true)
 func _physics_process(delta):
+		
 		velocitat.x = 0
 		if Input.is_action_pressed("D"):
 			velocitat += Vector2.RIGHT * velocitat_base
@@ -47,7 +48,7 @@ func anima(velocitat: Vector2):
 			elif Input.is_action_pressed("S"):
 				animacio.play("ataca")
 				pegant = true
-			if $CanvasLayer/BarraVida1.value == 20:
+			if $Node2D/BarraVida1.value == 20:
 				animacio.play("mor")
 				morint = true
 				
@@ -65,4 +66,4 @@ func _on_EspasaP2_body_entered(body):
 	if Input.is_action_pressed("R"):
 		pass
 	elif body.is_in_group("Personatge"):
-		$CanvasLayer/BarraVida1.value -= 20
+		$Node2D/BarraVida1.value -= 20
