@@ -11,6 +11,7 @@ func _ready():
 	position = Vector2(900,510)
 	$EspasaP2/CollisionEspasa.set_deferred('disabled', true)
 func _physics_process(delta):
+	
 		velocitat.x = 0
 		if Input.is_action_pressed("FLETXA_DRETA"):
 			velocitat += Vector2.RIGHT * velocitat_base

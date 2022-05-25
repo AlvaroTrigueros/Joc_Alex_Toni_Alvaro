@@ -14,4 +14,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$KinematicBody2D/Node2D/BarraVida1.rect_global_position = Vector2(-50,-1)
-	$KinematicBody2D2/Node2D/BarraVida2.rect_global_position = Vector2(800,-1)
+	$KinematicBody2D2/Node2D/BarraVida2.rect_global_position = Vector2(1074,-1)
+

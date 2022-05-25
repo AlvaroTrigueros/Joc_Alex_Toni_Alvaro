@@ -251,7 +251,25 @@ func _process(_delta):
 								$"Button(0,2)".emit_signal("pressed")
 							if c == 9:
 								$"Button(2,2)".emit_signal("pressed")
-
+	if comencar < 0.5:
+		if Input.is_action_just_pressed("1TTT") and $"Button(0,2)".pressed == false:
+			$"Button(0,2)".emit_signal("pressed")
+		if Input.is_action_just_pressed("2TTT") and $"Button(1,2)".pressed == false:
+			$"Button(1,2)".emit_signal("pressed")
+		if Input.is_action_just_pressed("3TTT") and $"Button(2,2)".pressed == false:
+			$"Button(2,2)".emit_signal("pressed")
+		if Input.is_action_just_pressed("4TTT") and $"Button(0,1)".pressed == false:
+			$"Button(0,1)".emit_signal("pressed")
+		if Input.is_action_just_pressed("5TTT") and $"Button(1,1)".pressed == false:
+			$"Button(1,1)".emit_signal("pressed")
+		if Input.is_action_just_pressed("6TTT") and $"Button(2,1)".pressed == false:
+			$"Button(2,1)".emit_signal("pressed")
+		if Input.is_action_just_pressed("7TTT") and $"Button(0,0)".pressed == false:
+			$"Button(0,0)".emit_signal("pressed")
+		if Input.is_action_just_pressed("8TTT") and $"Button(1,0)".pressed == false:
+			$"Button(1,0)".emit_signal("pressed")
+		if Input.is_action_just_pressed("9TTT") and $"Button(2,0)".pressed == false:
+			$"Button(2,0)".emit_signal("pressed")
 func _on_Button00_pressed():
 	$"Button(0,0)".pressed = true
 	$RichTextLabel.set_text('')
