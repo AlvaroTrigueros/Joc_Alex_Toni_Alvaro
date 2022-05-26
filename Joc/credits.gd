@@ -17,17 +17,4 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene("res://Menu_principal.tscn")
-	
-
-
-func _on_HS_Volum_value_changed(value):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index('Master'),value)
-
-
-func _on_CheckButton_pressed():
-	OS.window_borderless= !OS.window_borderless
-
-
-func _on_TextureButton2_pressed():
-	get_tree().change_scene("res://credits.tscn")
+	get_tree().change_scene("res://Settings.tscn")
