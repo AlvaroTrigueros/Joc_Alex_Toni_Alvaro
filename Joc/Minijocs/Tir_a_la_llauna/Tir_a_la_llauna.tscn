@@ -39,7 +39,7 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.82857, 2.20588 )
 frames = SubResource( 1 )
 animation = "animacio_fons"
-frame = 6
+frame = 3
 playing = true
 
 [node name="Marcador" parent="." instance=ExtResource( 3 )]

@@ -122,7 +122,8 @@ func _on_Ocell_ocell_aletejador_game_over():
 			get_tree().reload_current_scene()
 
 		if $Menu_mort/TornarAMenu.is_pressed():
-			print('pues encara no va')
+			#print('pues encara no va')
+			pass
 
 func save(llista_puntuacions, file_path):
 	var contingut = ''

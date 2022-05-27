@@ -78,7 +78,7 @@ func genera_temps_entre_cotxes():
 	
 	
 func _on_Area_cotxe_area_shape_entered():
-	print(puntuacio_guaita_l_objecte)
+	#print(puntuacio_guaita_l_objecte)
 	puntuacio_guaita_l_objecte = int(puntuacio_guaita_l_objecte)
-	print(puntuacio_guaita_l_objecte)
+	#print(puntuacio_guaita_l_objecte)
 	get_tree().change_scene("res://Minijocs/Guaita_Objecte/menu_o_jugar_cotxes.tscn")

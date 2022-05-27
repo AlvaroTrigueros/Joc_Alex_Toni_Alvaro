@@ -31,3 +31,10 @@ func _on_CheckButton_pressed():
 
 func _on_TextureButton2_pressed():
 	get_tree().change_scene("res://credits.tscn")
+	
+
+
+
+func _on_PAntalla_completa_pressed():
+	ProjectSettings.set_setting('display/window/stretch/mode', '2d')
+	ProjectSettings.save()

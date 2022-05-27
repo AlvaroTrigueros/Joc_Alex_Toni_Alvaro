@@ -11,7 +11,7 @@ func _ready():
 	comencar = rand_range(0,1)
 	print(comencar)
 	if comencar < 0.5:
-		print('Comencen les Creus!')
+		#print('Comencen les Creus!')
 		$RichTextLabel.set_text('Comencen les X!')
 	else:
 		print('Comencen les Rodones!')
