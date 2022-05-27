@@ -34,7 +34,5 @@ func _on_TextureButton2_pressed():
 	
 
 
-
 func _on_PAntalla_completa_pressed():
-	ProjectSettings.set_setting('display/window/stretch/mode', '2d')
-	ProjectSettings.save()
+	OS.window_fullscreen= !OS.window_fullscreen
